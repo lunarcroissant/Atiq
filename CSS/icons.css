@@ -8,7 +8,17 @@
 
 /* Mobile Utilities */
 
-/* At 850PX */
+/* At 768PX */
+
+@media(max-width: 768px) {
+  .mobile-menu-wrap .hamburger>div {
+    background: var(--light-background);
+  }
+}
+
+
+
+/* At 420PX */
 
 @media(max-width: 420px) {
   .submenu {
@@ -385,7 +395,7 @@
     flex: none;
     width: 100%;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--light-background);
     display: flex;
     /* border-radius: 50%; */
     /* flex: none; */

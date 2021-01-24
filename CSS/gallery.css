@@ -1,45 +1,18 @@
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  grid-auto-rows: 80px;
-  grid-gap: 20px;
-  width: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-li:nth-child(3) {
-  grid-column: 3 / span 2;
-}
-li:nth-child(4) {
-  grid-row:  2 / span 3;
-  background: lawngreen;
-}
-li:nth-child(6) {
-  grid-column: 3 / span 2;
-  background: lawngreen;
-}
-li:nth-child(7) {
-  grid-row: 5 / span 3;
-  grid-column: 2 / span 2;
-  background: lawngreen;
-}
-li:nth-child(10) {
-  grid-column: 4 / span 2;
-  grid-row: 6 / span 3;
-  background: lawngreen;
-}
-li:nth-child(12) {
-  grid-row: 10 / span 2;
-  background: lawngreen;
-}
-
 
 .portfolio {
   display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  max-height: 12000px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(125px, 1fr));
   grid-gap: 2rem;
-  
+  grid-auto-flow: dense;
+  margin: 40px;
+  overflow: hidden;
 }
 
 .portfolio-img {
@@ -48,5 +21,306 @@ li:nth-child(12) {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
 }
+.portfolio-img:hover {
+  filter: grayscale(100%);
+}
+
+/* BASE STYLES */
+
+.portfolio-img.square {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.portfolio-img.small-square {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.portfolio-img.large-square {
+  grid-row: span 3;
+  grid-column: span 3;
+  background: teal;
+}
+.portfolio-img.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+  background: rgb(155, 175, 175);
+}
+.portfolio-img.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+  background: rgb(6, 73, 73);
+}
+.portfolio-img.xltall {
+  grid-row: span 4;
+  grid-column: span 3;
+  background: rgb(155, 175, 175);
+}
+.portfolio-img.xlwide {
+  grid-row: span 3;
+  grid-column: span 4;
+  background: rgb(6, 73, 73);
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  visibility: visible;
+  opacity: 0;
+  z-index: 1;
+  color: var(--light-background);
+}
+
+.photo-hover:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.photo-hover-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  visibility: visible;
+  opacity: 0;
+  z-index: 1;
+  color: var(--primary-color);
+}
+
+.photo-hover-dark:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ORDERED IMAGES */
+
+.portfolio-img:nth-of-type(1) {
+  background: url(/static/CircusReflection89kb.jpg);
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+.portfolio-img:nth-of-type(2) {
+  background: url(/static/Liquid\ Paint\ \(WebReady\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(3) {
+  background: url(/static/PultneyBridgeAfterTheStorm_81kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(4) {
+  background: url(/static/BlackSwan_92kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(5) {
+  background: url(/static/HokkaidoDeer_56kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(6) {
+  background: url(/static/Dream\ Café.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-img:nth-of-type(7) {
+  background: url(/static/CamelsWaiting_84kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img.tall:nth-of-type(8) {
+  background: rgb(155, 175, 175);
+  background: url(/static/KyotoTempleCouple_87kb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-img:nth-of-type(9) {
+  background: url(/static/EveningRose_90kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(10) {
+  background: url(/static/Herbie\ Dehazed\ \(Less\ Red\)\ \(WebReady\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(11) {
+  background: url(/static/HokkaidoVolcano_72kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(12) {
+  background: url(/static/PultneyBridge1_66kb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-img:nth-of-type(13) {
+  background: url(/static/Roof_52kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(14) {
+  background: url(/static/CuriousCat_185kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(15) {
+  background: url(/static/MorrocanCar66kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(16) {
+  background: url(/static/TempleTop_51kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(17) {
+  background: url(/static/BeginningOfTheSahara_31kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(18) {
+  background: url(/static/Cleo_92kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(19) {
+  background: url(/static/Glowfish_66kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(20) {
+  background: url(/static/BathAbbey1_54kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-img:nth-of-type(21) {
+  background: url(/static/CappadociaBalloons_58kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(22) {
+  background: url(/static/BathRooftops_71kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(23) {
+  background: url(/static/Hokkaido\ Deer\ 5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(24) {
+  background: url(/static/BathSunsetRooftops_91kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(25) {
+  background: url(/static/LondonRoad_118kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(26) {
+  background: url(/static/CloudsBlue_37kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(27) {
+  background: url(/static/BathChurchTower_52kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(28) {
+  background: url(/static/CarWindowReflectionCircus_83kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(29) {
+  background: url(/static/Herbie\ Dehazed\ \(Less\ Red\)\ \(WebReady\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(30) {
+  background: url(/static/CappadociaRider_122kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(31) {
+  background: url(/static/BathMorning_72kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(32) {
+  background: url(/static/BathPultneySteamRising68kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(33) {
+  background: url(/static/BathAbbeyFrontMorning_72kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(34) {
+  background: url(/static/ParkKeeperHouse_125kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(35) {
+  background: url(/static/IstanbulOJ_188kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(36) {
+  background: url(/static/ShamCastle_85kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(37) {
+  background: url(/static/BathThroughTrees_154kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.portfolio-img:nth-of-type(38) {
+  background: url(/static/BathAbbeyReflection2_66kb.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+
+
