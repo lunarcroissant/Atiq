@@ -159,7 +159,7 @@
     opacity: 0.9;
     padding: 0px;
     font-size: 3rem;
-    padding: 2rem 4rem;
+    margin: 2rem 4rem;
   }
 
   .nav-btn-active {
@@ -168,7 +168,7 @@
     opacity: 0.7;
     padding: 0px;
     font-size: 3rem;
-    padding: 2rem 4rem;
+    margin: 2rem 4rem;
   }
 
   .nav-btn:hover {
@@ -177,7 +177,7 @@
     padding: 0px;
     font-size: 30px;
     text-decoration: underline;
-    padding: 2rem 4rem;
+    margin: 2rem 4rem;
   }
 
   .nav-btn-light {
@@ -186,7 +186,7 @@
     opacity: 0.9;
     padding: 0px;
     font-size: 30px;
-    padding: 2rem 4rem;
+    margin: 2rem 4rem;
   }
 
   .nav-btn-light-active {
@@ -195,7 +195,7 @@
     opacity: 0.7;
     padding: 0px;
     font-size: 30px;
-    padding: 2rem 4rem;
+    margin: 2rem 4rem;
   }
 
   .cta-btn {
