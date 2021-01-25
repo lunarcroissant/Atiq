@@ -152,11 +152,30 @@ p {
 
 .nav-btn-light {
   text-decoration: none;
+  position: relative;
   color: var(--light-background);
-  opacity: 0.9;
-  padding: 0px;
+  opacity: 1;
   font-size: 30px;
   margin: 2rem 4rem;
+  padding: 5px 0px;
+}
+
+.nav-btn-light::after {
+  content: "";
+  position: absolute;
+  background: var(--light-background);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 400ms ease-in;
+}
+.nav-btn-light:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  opacity: 1;
 }
 
 .nav-btn-light-active {
@@ -645,13 +664,13 @@ nav li img {
 .marquee {
   width: 100vw;
   background-color: var(--light-background);
-  height: 80vh;
+  height: 62vh;
   color: #ee563b;
   overflow: hidden;
   justify-content: center;
   position: relative;
 }
-.marquee::before, .marquee:after {
+.marquee::before {
   position: absolute;
   width: 4rem;
   height: 100%;
