@@ -580,7 +580,7 @@ nav li img {
 }
 
 .print-gallery-img:nth-of-type(6) {
-  background: url(/static/Dream\ Café.jpg);
+  background: url(/static/DreamCafe_168kb.jpg);
   background-position: right;
   background-size: cover;
 }
@@ -712,7 +712,7 @@ nav li img {
   background-size: cover;
 }
 .marquee-content li:nth-of-type(4) {
-  background: url(/static/Dream\ Café.jpg);
+  background: url(/static/DreamCafe_168kb.jpg);
   background-position: center;
   background-size: cover;
   width: 25vw;
@@ -791,7 +791,7 @@ nav li img {
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-353vw);
+    transform: translateX(calc(calc(25vw * -6) - calc(60vw * 3) - calc(2vw * 9)));
   }
 }
 
