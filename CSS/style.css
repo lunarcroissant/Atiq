@@ -46,18 +46,18 @@ body {
 h1 {
   font-size: 6.4rem;
   margin-bottom: 4rem;
-  color: var(--primary-color);
+  
 }
 
 h2 {
   font-size: 5.5rem;
-  color: var(--primary-color);
+  
 }
 
 h3 {
   font-size: 4.8rem;
   padding-bottom: 4rem;
-  color: var(--primary-color);
+  
 }
 
 h4 {
@@ -79,7 +79,6 @@ p {
   font-weight: 200;
   font-size: 2.4rem;
   line-height: 1.9;
-  color: var(--primary-color);
 }
 
 .bold-p {
@@ -341,7 +340,7 @@ p {
 
 .grid-two-column {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
 }
 
@@ -1123,29 +1122,34 @@ nav li img {
 #clean-design {
   padding: 4rem;
   margin-top: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: top;
+  margin-bottom: 10vh;
 }
 
 #clean-design h2 {
   display: block;
-  text-align: right;
+  text-align: left;
 }
 
 #clean-design p {
-  text-align: right;
+  text-align: left;
   padding: 5rem 0rem;
   vertical-align: middle;
 }
 
-.grid-two-column img {
-  max-width: 40vw;
-  text-align: center;
-  justify-content: right;
-  align-items: center;
-  object-fit: cover;
+#clean-design img {
+  max-width: 400px;
   /* transform: skewY(50deg); */
+  align-self: right;
 }
 
-.grid-two-column img:hover {
+.clean-design-image {
+  text-align: center;
+}
+
+#clean-design img:hover {
   
   transform: perspective(400px) rotateY(5deg);
 }
@@ -1156,15 +1160,46 @@ nav li img {
   margin: 0rem 4rem;
 }
 
-.icons-background-image::after {
-  content: '';
-  background-image: url(/static/CycleIcon950x900.png) no-repeat center center/cover;
-  opacity: 0.85;
-  height: 500px;
+#lifetime-updates {
+  background-image: url(/static/CycleIcon950x900.png) center center/cover !important;
+  opacity: 1;
+  min-height: 300px;
+  width: auto;
+  margin-bottom: 20vh;
+}
+
+#lifetime-updates {
+  display: grid;
+  grid-template-areas: 
+  'Lifetime-Updates-Headline Cycle-Icon'
+  'Lifetime-Updates-Copy Cycle-Icon';
+  grid-gap: 4rem;
+}
+
+#lifetime-updates h2 {
+  grid-area: Lifetime-Updates-Headline;
+}
+#lifetime-updates p {
+  grid-area: Lifetime-Updates-Copy;
+}
+#lifetime-updates img {
+  grid-area: Cycle-Icon;
+  max-width: 35vw;
+  align-self: right;
+  animation: cyclerotate 5s infinite 1s ease-in-out;
+  /* transform: skewX(45deg); */
+  opacity: .2;
+}
+
+@keyframes cyclerotate {
+  to {
+    transform: rotate(360deg);
+  
+  }
 }
 
 #lifetime-updates p {
-  max-width: 700px;
+  max-width: 40vw;
 }
 
 /* HQ Backgrounds */
@@ -1179,6 +1214,10 @@ nav li img {
   max-width: 800px;
 }
 
+#hq-backgrounds {
+  margin-bottom: 10vh;
+}
+
 /* UNLIMITED Customisation */
 
 #unlimited-customisation p {
@@ -1188,7 +1227,7 @@ nav li img {
 
 .icons-overview-two-column {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
   justify-content: center;
   align-items: center;
@@ -1196,7 +1235,7 @@ nav li img {
 }
 
 .icons-overview-two-column img {
-  max-width: 80vw;
+  max-width: 700px;
   justify-content: center;
   align-items: center;
   text-align: center;
