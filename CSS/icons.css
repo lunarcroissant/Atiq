@@ -1,9 +1,16 @@
 /* CUSTOM PROPERTIES */
 
 :root {
-  --primary-color: #111111;
-  --light-background: #FDFDFD;
-  --accent-color: #ee563b;
+  --primary-color: #020308;
+  --atiq-red: #C04F43;
+  --atiq-blue: #64A5A9;
+  --light-background: #F7F7F7;
+  --accent-color: #EF5C4E;
+  --secondary-action-color: #CC4240;
+  --tertiary-action-color: #3D878A;
+  --grounding-color-redish: #E3D8DB;
+  --ground-color-sandish: #E7E2CE;
+
 }
 
 /* Mobile Utilities */
