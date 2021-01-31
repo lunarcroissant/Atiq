@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.regular-nav {
+  margin-left: 4rem;
+}
+
 .portfolio {
   display: grid;
   max-height: 12000px;
