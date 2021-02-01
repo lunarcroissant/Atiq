@@ -1269,6 +1269,9 @@ nav li img {
 
 #lifetime-updates {
   margin: 0rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #lifetime-updates {
