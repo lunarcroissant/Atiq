@@ -17,50 +17,7 @@
 /* Home */
 
 @media(max-width: 1600px) {
-  .showcase-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    word-wrap: wrap;
-    width: 100%;
-    height: 85vh;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    color: var(--light-background);
-    width: 100%;
-    background: url(/static/IMG_0083_Dimmed.jpg) no-repeat center center/cover;
-    /* opacity: 0.9; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  /* .hero-content::before {
-    content: '';
-    background: url(/static/IMG_0083_Dimmed.jpg) no-repeat center center/cover;
-    opacity: 0.9;
-    position: absolute;
-    width: 100%;
-    height: 60vh;
-    z-index: -1;
-  } */
-
-  .hero-content::before::before {
-    background: var(--primary-color);
-    opacity: 1;
-  }
-
-  .hero-content a {
-    color: var(--light-background);
-    border-color: var(--light-background);
-
-  }
-
-  .submenu {
-    background-image: linear-gradient(to top, rgba(247, 247, 247, 1), rgba(253, 253, 253, 0.01));
-  }
+  
 
   /* Gallery */
 
