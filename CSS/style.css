@@ -464,7 +464,7 @@ p {
 .hero-background {
   height: 100vh;
   width: 100vw;
-  background: url(/static/KOLOROK\ HERO\ IMAGE-min.png) top center/cover no-repeat;
+  background: url(/static/KOLOROK\ HERO\ IMAGE\ 1600px-min.jpg) top center/cover no-repeat;
   position: relative;
   filter: blur(38px);
   overflow: hidden;
