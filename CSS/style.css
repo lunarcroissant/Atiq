@@ -106,12 +106,13 @@ h6 {
 
 p {
   font-weight: 200;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   line-height: 1.9;
 }
 
 .bold-p {
   font-weight: 800;
+  font-size: 1.6rem;
 }
 
 .highlight {
@@ -155,6 +156,10 @@ p {
   font-size: 2rem;
   padding: 5px 0;
   margin-right: 4rem;
+}
+
+.nav-btn-icon:hover {
+  opacity: 0.8;
 }
 .nav-btn {
   text-decoration: none;
@@ -545,17 +550,35 @@ nav li img {
 
 #product-areas {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20vh;
   line-height: 800%;
+  overflow: visible;
+  opacity: 1;
 }
+#product-areas img {
+  display: none;
+}
+
 #product-areas h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 300;
+  opacity: 1;
 }
+#product-areas h3:hover {
+  font-weight: 500;
+  opacity: 1;
+}
+
+#product-areas h3:not(:hover) {
+  opacity: 0.2 !important;
+  transition: .5s ease-in-out;
+}
+
 
 
 /* SECOND PROMO */
@@ -957,7 +980,7 @@ nav li img {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 40px 0px;
-  margin-left: 4rem;
+  margin: 0 4rem;
 }
 
 .regular-nav ul {
@@ -974,16 +997,175 @@ nav li img {
   padding: 0px 4rem;
 }
 
+.regular-nav p:last-of-type {
+  font-size: 1.2rem;
+  display: inline-block;
+  opacity: 0.3;
+}
+
 .payment-notice {
   text-align: right;
   align-items: center;
   display: inline;
 }
 
-.payment-notice p {
-  font-size: 1.5rem;
-  display: inline-block;
+/* GENERAL SHOP STYLING */
+
+#project-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 550px);
+  grid-template-rows: repeat(2, 350px);
+  grid-auto-flow: dense;
+  margin: 6rem 4rem;
+  grid-gap: 8rem;
+  height: 70vh;
+  margin-bottom: 100rem;
+  /* width: 100vw; */
 }
+
+/* PRINTS TILE */
+
+#prints {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1 / span 2;
+  /* grid-template-areas: 
+  'prints prints clothing clothing nav-menu'; */
+}
+
+#main-hero-image {
+  width: 100%;
+  height: 100%;
+  /* min-height: 100%; */
+  background: url(/static/Cactus_121kb.jpg) center center/cover no-repeat;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.call-out-new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: var(--light-background) 3px solid;
+  z-index: 2;
+  color: var(--light-background);
+  padding: .6rem 2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.tile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #252525;
+}
+
+.category-and-subfact {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: left;
+}
+
+.category-and-subfact h6 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.tile-info p:nth-of-type(2) {
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+}
+
+.cta-small {
+  font-weight: 500;
+  border: var(--primary-color) 3px solid;
+  padding: .6rem 2rem;
+}
+
+/* CLOTHING */
+
+#clothing {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  grid-row: 1;
+  grid-column: 3;
+}
+
+#large-square-image {
+  height: 350px;
+  width: 350px;
+  background: url(/static/CrocoFish_InPark.jpg) center center/cover no-repeat;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* ICONS */
+
+#icon-packs {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.thin-horizontal-image {
+  background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
+  height: 350px;
+  width: 350px;
+  margin-bottom: 3rem;
+}
+
+/* STORE NAV */
+
+#store-nav {
+  display: flex;
+  flex-direction: column;
+  grid-column: 5;
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+}
+
+#store-nav h6 {
+  line-height: 4rem;
+}
+
+/* PAINTINGS */
+
+#paintings {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 4;
+}
+
+.square-tile {
+  background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
+  height: 350px;
+  width: 350px;
+  
+}
+
+/* UPCOMING PROJECTS */
+
+#upcoming-projects {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2;
+  grid-column: 4;
+}
+
+.thin-horizontal-image {
+  background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
+  height: 350px;
+  width: 350px;
+}
+
 
 .store-category {
   padding: 2rem 4rem;

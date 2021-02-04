@@ -1,0 +1,205 @@
+/* PRINT LAYOUT */
+
+#print-gallery-river-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding-left: 175px;
+  padding-right: 125px;
+  position: relative;
+  margin-top: 10vh;
+}
+
+.print-gallery-river-regular {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding-left: 175px;
+  padding-right: 125px;
+  position: relative;
+  margin-top: 65vh;
+}
+
+.print-gallery-river-regular:last-of-type {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding-left: 175px;
+  padding-right: 125px;
+  position: relative;
+  margin-top: 65vh;
+  margin-bottom: 10vh;
+}
+
+#print-gallery-river-1:last-child {
+  align-items: right;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.picture-frame-portrait {
+  height: 675px;
+  width: 451px;
+  /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px inset;
+  background: var(--light-background);
+  position: relative;
+}
+
+.picture-frame-landscape {
+  width: 675px;
+  height: 451px;
+  /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px inset;
+  background: var(--light-background);
+  position: relative;
+}
+
+/* PORTRAIT SIZING */
+
+.portrait-print {
+  height: 675px;
+  width: 451px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.portrait-print img {
+  height: 675px;
+  width: 451px;
+  overflow: hidden;
+  position: absolute;
+  object-position: center;
+  object-fit: cover;
+}
+
+.portrait-print:hover {
+  transition: ease-in .3s;
+  transform: scale(.85);
+  transform-origin: center;
+  transition-timing-function: linear;
+}
+.portrait-print:not(:hover) {
+  transition: ease-out .3s;
+}
+
+/* LANDSCAPE SIZING */
+
+.landscape-print {
+  width: 675px;
+  height: 451px;
+  overflow: hidden;
+  position: absolute;
+}
+.landscape-print img {
+  width: 675px;
+  height: 451px;
+  overflow: hidden;
+  position: absolute;
+  object-position: center;
+  object-fit: cover;
+}
+
+.landscape-print:hover {
+  transition: ease-in .3s;
+  transform: scale(.85);
+  transform-origin: center;
+  transition-timing-function: linear;
+}
+.landscape-print:not(:hover) {
+  transition: ease-out .3s;
+}
+
+
+.picture-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  vertical-align: text-bottom;
+  padding-left: 4rem;
+}
+
+.picture-info-wrapper {
+  vertical-align: text-bottom;
+  justify-content: flex-end;
+  align-self: end;
+  align-items: bottom;
+}
+
+.image-shout-icon {
+  display: flex;
+  border: var(--primary-color) 3px solid;
+  z-index: 2;
+  color: var(--primary-color);
+  padding: .2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 60px;
+  height: 40px;
+}
+
+.picture-info h6 {
+  font-weight: 600;
+}
+
+.right-side-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 125px;
+  height: 100%;
+}
+
+.right-side-info svg {
+  justify-content: flex-end;
+  vertical-align: bottom;
+}
+
+.bold-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.year-and-price a {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-decoration: underline var(--primary-color);
+}
+
+.year-and-price svg {
+  margin: 0 1rem;
+}
+/* .year-and-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+} */
+
+.year-and-price {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex; /* Safari */  
+  display: flex;
+  -webkit-align-items: center; /* Safari 7.0+ */
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Print 1 */
+
+/* Print 2 */
+
+
+
+
