@@ -48,6 +48,8 @@
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
   --marquee-animation-duration: 30s;
+  --product-area-tile-height: 375px; 
+  --product-area-tile-image-margin-bottom: 2rem; 
 }
 
 html {
@@ -1013,15 +1015,17 @@ nav li img {
 
 #project-areas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 550px);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-columns: 550px 400px 400px 200px;
+  grid-template-rows: repeat(2, 375px);
   grid-auto-flow: dense;
-  margin: 6rem 4rem;
-  grid-gap: 8rem;
-  height: 70vh;
+  margin: 2rem 4rem;
+  grid-gap: 4.8rem;
+  height: 75vh;
   margin-bottom: 100rem;
   /* width: 100vw; */
 }
+
+
 
 /* PRINTS TILE */
 
@@ -1039,7 +1043,7 @@ nav li img {
   /* min-height: 100%; */
   background: url(/static/Cactus_121kb.jpg) center center/cover no-repeat;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
 .call-out-new {
@@ -1084,6 +1088,9 @@ nav li img {
   font-weight: 500;
   border: var(--primary-color) 3px solid;
   padding: .6rem 2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 20px;
 }
 
 /* CLOTHING */
@@ -1091,17 +1098,17 @@ nav li img {
 #clothing {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: var(--product-area-tile-height);
   grid-row: 1;
-  grid-column: 3;
+  grid-column: 2;
 }
 
 #large-square-image {
   height: 350px;
-  width: 350px;
+  width: inherit;
   background: url(/static/CrocoFish_InPark.jpg) center center/cover no-repeat;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
 /* ICONS */
@@ -1110,14 +1117,15 @@ nav li img {
   display: flex;
   flex-direction: column;
   grid-row: 2;
-  grid-column: 3;
+  grid-column: 2;
+  height: var(--product-area-tile-height);
 }
 
 .thin-horizontal-image {
   background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
   height: 350px;
-  width: 350px;
-  margin-bottom: 3rem;
+  width: inherit;
+  margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
 /* STORE NAV */
@@ -1125,7 +1133,7 @@ nav li img {
 #store-nav {
   display: flex;
   flex-direction: column;
-  grid-column: 5;
+  grid-column: 4;
   align-items: right;
   justify-content: right;
   text-align: right;
@@ -1133,6 +1141,7 @@ nav li img {
 
 #store-nav h6 {
   line-height: 4rem;
+  font-size: 16px;
 }
 
 /* PAINTINGS */
@@ -1141,14 +1150,15 @@ nav li img {
   display: flex;
   flex-direction: column;
   grid-row: 1;
-  grid-column: 4;
+  grid-column: 3;
+  height: var(--product-area-tile-height);
 }
 
 .square-tile {
   background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
   height: 350px;
-  width: 350px;
-  
+  width: inherit;
+  margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
 /* UPCOMING PROJECTS */
@@ -1157,13 +1167,8 @@ nav li img {
   display: flex;
   flex-direction: column;
   grid-row: 2;
-  grid-column: 4;
-}
-
-.thin-horizontal-image {
-  background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover no-repeat;
-  height: 350px;
-  width: 350px;
+  grid-column: 3;
+  height: var(--product-area-tile-height);
 }
 
 
