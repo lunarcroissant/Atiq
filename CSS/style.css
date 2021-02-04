@@ -626,15 +626,28 @@ nav li img {
 }
 
 .promo-image-container-1:hover {
-  animation: image-container-hover-turn-left 0.9s ease-in-out 0.1s forwards;
+  /* animation: image-container-hover-turn-left 0.9s ease-in-out 0.1s forwards; */
+  transform: perspective(1000px) translateX(5%) translateY(-3%) rotateY(-8deg);
+  transition: ease-in .5s;
 }
+
+.promo-image-container-1:not(:hover) {
+  transition: ease-out .5s;
+}
+
 
 .promo-image-container-2:hover {
-  animation: image-container-hover-turn-right 0.7s ease-in-out 0.1s forwards;
-  animation-fill-mode: both;
+  transform: perspective(1000px) translateY(-2%) rotateY(10deg);
+  transition: ease-in .5s;
+  /* animation: image-container-hover-turn-right 0.7s ease-in-out 0.1s forwards; */
+  /* animation-fill-mode: both; */
 }
 
-@keyframes image-container-hover-turn-right {
+.promo-image-container-2:not(:hover) {
+  transition: ease-out .5s;
+}
+
+/* @keyframes image-container-hover-turn-right {
   100% {
     transform: perspective(1000px) translateY(-2%) rotateY(10deg);
 
@@ -646,7 +659,7 @@ nav li img {
   100% {
     transform: perspective(1000px) translateX(5%) translateY(-3%) rotateY(-8deg);
   }
-}
+} */
 
 /* LATEST PRINTS */
 
