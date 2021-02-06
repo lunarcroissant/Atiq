@@ -4,21 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Atiq</title>
 
-  <link rel="stylesheet" href="/CSS/style.css">
+
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/printgallery.css">
   <link rel="stylesheet" href="./CSS/mobile.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;500;600;700&display=swap" rel="stylesheet">
   <link rel='shortcut icon' type='image/x-icon' href='/static/Atiq Logo 32px.png' />
+
+  <title>Atiq | Prints</title>
 </head>
 
-<body class="about">
+<body>
 
   <!-- NAVBAR -->
 
   <header>
-    <nav class="nav-bar-about">
+    <nav class="nav-bar">
       <div class="regular-nav">
         <ul>
           <li><a class="nav-btn-icon" href="index.html"><img src="./static/Atiq Logo (Black).png" alt="Atiq Logo"></a>
@@ -38,58 +41,49 @@
               <div>
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="about.html">About</a></li>
                   <li><a href="prints.html">Gallery</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        <p>All payments are processed via Gumroad (Digital Products Only) or Etsy.</p>
       </div>
     </nav>
   </header>
 
-  <!-- About Atiq -->
+  <!-- Print #1 -->
 
-  <div class="background-gradient-div">
-    <div class="about-atiq-background">
-      <section class="about-atiq">
-        <h1>ATIQ?</h1>
-        <div class="store-divider-light"></div>
-        <p>The purpose of Atiq is to give creative ideas and projects a home. Whether you just want to look at some
-          photos
-          or play with a concrete chess set, you’ll most likely find it here.<br><br>More to come. </p>
-      </section>
+  <div id="print-gallery-river-1">
+    <div class="picture-frame-portrait">
+      <div class="portrait-print"><img src="/static/Liquid Paint (WebReady).jpg"
+          alt="Abstract painting of running paint"></div>
     </div>
-
-    <form name="contact" class="contact-form" netlify>
-      <div id="contact-form-header">
-        <h1>GET IN TOUCH</h1>
-        <div class="store-divider"></div>
+    <div class="picture-info">
+      <div class="picture-info-wrapper">
+        <div class="image-shout-icon-paintings">UNIQUE</div>
+        <h6>Wave</h6>
+        <div class="year-and-price">
+          <p>2019</p>
+          <svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="2" height="2" fill="#333333" />
+          </svg>
+          <a href="#">£50.00</a>
+        </div>
       </div>
-
-      <div class="full-name-field form-light">
-        <label for="Full Name">YOUR NAME</label><br>
-        <input type="text" name="Full Name" placeholder="YOUR NAME">
-      </div>
-
-      <div class="email-field form-light">
-        <label for="Email">EMAIL</label><br>
-        <input type="email" name="Email" placeholder="EMAIL ADDRESS">
-      </div>
-
-      <div class="message form-light">
-        <label for="Message">YOUR MESSAGE</label><br>
-        <textarea name="message" id="Message" cols="50" rows="5" placeholder="WHAT WOULD YOU LIKE TO SAY?"></textarea>
-      </div>
-
-      <button class="submit-button" type="submit">SUBMIT</button>
-    </form>
+    </div>
+    <div class="right-side-info">
+      <p><span class="bold-number">01</span>/01</p>
+      <!-- <svg width="15" height="114" viewBox="0 0 15 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8.07031" width="111" height="2" transform="rotate(90 8.07031 0)" fill="#252525" />
+        <rect x="1.41406" y="104.586" width="10" height="2" transform="rotate(45 1.41406 104.586)" fill="#252525" />
+        <rect x="14.1406" y="106" width="10" height="2" transform="rotate(135 14.1406 106)" fill="#252525" />
+      </svg> -->
+    </div>
   </div>
 
-  <!-- FOOTER -->
-
-  <footer id="footer" class="footer bg-light">
+  <footer id="footer" class="footer">
     <p>Copyright &copy; <span class="bold-p">Atiq</span> 2021</p>
     <div class="socials">
       <a href="https://www.instagram.com/atiq.studios/">Instagram</a>
@@ -98,5 +92,3 @@
   </footer>
 
 </body>
-
-</html>

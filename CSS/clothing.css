@@ -1,0 +1,491 @@
+*, html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Heading Styling */
+
+#hero-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4rem;
+  text-align: center;
+  align-items: top;
+}
+
+.highlight-box {
+  display: flex;
+  text-decoration: none;
+  outline: 3px var(--primary-color) solid;
+  padding: .5rem 2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.clothing-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 2rem;
+}
+
+.bold-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Below Heading */
+
+#clothing-hero-section {
+  display: flex;
+  flex-direction: row;
+  margin: 8rem;
+}
+
+.clothing-hero-pic-shadow {
+  height: 675px;
+  width: 50%;
+  /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+  background: var(--light-background);
+  position: relative;
+}
+
+.clothing-hero-pic {
+  height: 675px;
+  width: 100%;
+  /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+  position: relative;
+  object-fit: cover;
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+  position: absolute;
+}
+.clothing-hero-pic img {
+  height: 675px;
+  width: 451px;
+  /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+  position: relative;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+}
+
+/* Hero Image Info */
+
+.picture-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 4rem;
+  flex-wrap: wrap;
+  max-width: 600px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.clothing-description {
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex; /* Safari */  
+  display: flex;
+  -webkit-justify-content: center; /* Safari 7.0+ */
+  justify-content: center;
+  margin-top: 50%;
+}
+
+.clothing-description ul {
+  list-style-type: square;
+  font-weight: 300;
+  line-height: 4rem;
+  margin-left: 4rem;
+  color: var(--primary-color);
+}
+
+.clothing-description li {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.bold-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.year-and-price a {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-decoration: underline var(--primary-color);
+}
+
+.year-and-price svg {
+  margin: 0 1rem;
+  justify-content: flex-end;
+  vertical-align: bottom;
+}
+/* .year-and-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+} */
+
+.year-and-price {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex; /* Safari */  
+  display: flex;
+  -webkit-align-items: center; /* Safari 7.0+ */
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.image-shout-icon-paintings {
+  display: flex;
+  border: var(--primary-color) 3px solid;
+  z-index: 2;
+  color: var(--primary-color);
+  padding: .2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 80px;
+  height: 40px;
+}
+
+.right-side-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  vertical-align: bottom;
+}
+
+.right-side-info svg {
+  justify-content: flex-end;
+  vertical-align: bottom;
+}
+
+/* SECOND SECTION CLOTHING */
+
+#clothing-second-section {
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: 3;
+  margin: 20rem 4rem;
+  grid-gap: 4rem;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+  width: 70%;
+}
+
+.clothing-image-left {
+  height: 600px;
+  width: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+
+.clothing-image-right {
+  height: 600px;
+  width: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  grid-column: 4;
+  grid-row: 1 /span 2;
+
+}
+
+.clothing-image-left img, .clothing-image-right img {
+  height: 600px;
+  width: 400px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* THIRD CLOTHING SECTION */
+
+#clothing-third-section {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: space-evenly;
+  margin: 20rem 4rem;
+}
+
+.third-section-clothing-image-left, .third-section-clothing-image-right {
+  display: block;
+  height: 600px;
+  width: 400px;
+}
+
+.third-section-clothing-image-left img {
+  height: 600px;
+  width: 400px;
+  grid-column: 1;
+}
+
+.third-section-clothing-image-right img {
+  height: 600px;
+  width: 400px;
+  grid-column: 3;
+}
+
+.third-section-clothing-image-left img .third-section-clothing-image-right img {
+  height: 600px;
+  width: 400px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.clothing-third-section-text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#free-shipping {
+  text-align: right;
+}
+
+/* CLOTHING FOURTH SECTION */
+
+#clothing-fourth-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 4rem;
+  margin-top: 30rem;
+  grid-gap: 4rem;
+}
+
+.clothing-fourth-section-left-image img {
+  height: 80vh;
+  
+  overflow: hidden;
+  object-fit: cover;
+}
+
+#clothing-fourth-section-right-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-self: flex-end;
+}
+
+#clothing-fourth-section-right-text ul {
+  list-style: none;
+  line-height: 3rem;
+}
+
+#clothing-fourth-section-right-text li {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+#clothing-fourth-section-right-text h6 {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+
+
+
+/* UPCOMING PROJECTS STYLING */
+
+#upcoming {
+  height: 100vh;
+  background: url(/static/KOLOROK_RedTeam_2000x1500_873kb.png) no-repeat center center/cover;
+}
+
+#upcoming-hero-image {
+  /* background: var(--light-background); */
+}
+
+#upcoming-hero-heading {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: top;
+  height: 90vh;
+  /* background: url(/static/KOLOROK_RedTeam_2000x1500_873kb.png) center bottom/cover no-repeat; */
+}
+
+#upcoming-hero-heading > div:first-of-type {
+  margin-left: 4rem;
+}
+
+#upcoming-hero-heading > div:last-of-type {
+  margin-right: 4rem;
+}
+
+.right-side-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right-side-details svg {
+  margin-top: 10vh;
+}
+
+#upcoming-page-transition {
+  background-image: linear-gradient(to top, rgb(247, 247, 247, 1), rgba(247, 247, 247, 0.01));
+  height: 125vh;
+}
+
+#upcoming-hero-section {
+  background: var(--light-background);
+  /* height: 300vh; */
+}
+
+#chess-benefits {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 8rem;
+}
+
+#chess-benefits > div {
+ margin: 6rem;
+ max-width: 800px;
+}
+
+#chess-benefits > div:nth-of-type(2) {
+ text-align: right;
+ align-self: flex-end;
+}
+
+#chess-benefits > div:nth-of-type(4) {
+ text-align: right;
+ align-self: flex-end;
+}
+
+#chess-story {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 4rem;
+  /* background: url(/static/GrayChessFromAbove_900x1200_389kb.png) center center/cover no-repeat; */
+  width: 100vw;
+  /* height: 1700px; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  padding: 15rem 0;
+}
+
+#chess-story img {
+  /* height: 1700px; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+  width: 90vw;
+  opacity: .5;
+}
+
+#chess-story h2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  font-size: 4rem;
+  color: var(--primary-color);
+  z-index: 2;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+  align-self: center;
+  width: 30vw;
+}
+
+#chess-interest-form {
+  display: flex;
+  flex-direction: column;
+  background: var(--light-background);
+  padding: 4rem;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+#chess-interest-form h3 {
+  margin-bottom: 3rem;
+}
+
+.form-row button {
+  margin-top: 3rem;
+  font-size: 2rem;
+  background: var(--primary-color);
+  outline: 3px solid var(--primary-color);
+  margin-left: 2rem;
+  padding: 1rem;
+  
+  color: var(--light-background);
+  width: 150px;
+  align-self: center;
+
+}
+
+#chess-interest-form input {
+  outline: 3px solid var(--primary-color);
+  text-decoration: none;
+  max-width: 300px;
+  font-size: 20px;
+  border: none;
+  padding: 1rem;
+  font-weight: 300;
+}
+
+#chess-interest-form label {
+  text-decoration: none;
+  max-width: 300px;
+  font-size: 20px;
+  border: none;
+  padding: 1rem;
+}
+
+#final-upcoming-image {
+  background: var(--light-background);
+  width: 100vw;
+  padding-right: 30%;
+}
+
+#final-upcoming-image {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  border: 0;
+}

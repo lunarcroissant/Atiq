@@ -142,6 +142,22 @@
   height: 40px;
 }
 
+.image-shout-icon-paintings {
+  display: flex;
+  border: var(--primary-color) 3px solid;
+  z-index: 2;
+  color: var(--primary-color);
+  padding: .2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 80px;
+  height: 40px;
+}
+
 .picture-info h6 {
   font-weight: 600;
 }
