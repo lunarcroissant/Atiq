@@ -323,7 +323,7 @@
 }
 
 #upcoming-hero-image {
-  /* background: var(--light-background); */
+  background: var(--light-background);
 }
 
 #upcoming-hero-heading {
