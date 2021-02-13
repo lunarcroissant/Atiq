@@ -42,10 +42,11 @@
   --tertiary-action-color: #3D878A;
   --grounding-color-redish: #E3D8DB;
   --ground-color-sandish: #E7E2CE;
-  --marquee-width: 100vw;
+  --marquee-landscape-width: 60vw;
+  --marquee-portrait-width: 25vw;
   --marquee-height: 40vh;
   --marquee-elements: 9;
-  --marquee-elements-displayed: 5;
+  --marquee-elements-displacement-x: (calc(calc(var(--marquee-portrait-width) * -6) - calc(var(--marquee-landscape-width) * 3) - calc(2vw * 9)));
   --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
   --marquee-animation-duration: 30s;
   --product-area-tile-height: 1fr; 
@@ -122,11 +123,13 @@ p {
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   padding: 40px;
   align-items: center;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .footer a {
@@ -134,16 +137,20 @@ p {
   font-weight: 500;
   color: var(--primary-color);
   text-decoration: none;
-  margin-left: 3rem;
 }
 
 .footer a:hover {
-  /* text-decoration: underline 2px var(--primary-color) solid; */
   font-weight: 900;
 }
 
 .socials {
   text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-end;
+  right: 4rem;
+  gap: 3rem;
 }
 
 .bg-light {
@@ -261,21 +268,20 @@ p {
 }
 
 .cta-btn {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 300;
   text-decoration: none;
   text-align: center;
   color: var(--primary-color);
-  padding: 22px 70px;
-  border: solid var(--primary-color) 3px;
+  padding: 2.2rem 7rem;
+  outline: solid var(--primary-color) 3px;
   margin: 4rem 4rem;
   background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
   background-size: 200%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 450px;
-  height: 110px;
+  
   transition: .7s ease-in-out;
 }
 
@@ -287,7 +293,7 @@ p {
   color: var(--light-background);
   text-decoration: none;
   padding: 22px 70px;
-  border: solid var(--primary-color) 4px;
+  outline: solid var(--primary-color) 3px;
   margin: 4rem;
   background-position: left;
   /* animation: cta-btn-hover 3s forwards ease-in-out; */
@@ -508,18 +514,13 @@ p {
 }
 
 .hero-content {
-  /* vertical-align: center; */
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  padding: 4rem;
+  padding: 4em;
   text-overflow: wrap;
-  letter-spacing: 8rem;
+  letter-spacing: 8em;
   position: relative;
   color: rgb(37, 37, 37);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .redcircle {
@@ -550,8 +551,8 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin: 0 4rem;
+  gap: 4em;
+  margin: 0 4em;
 }
 
 nav li img {
@@ -673,7 +674,6 @@ nav li img {
   height: 800px;
   width: 550px;
   visibility: visible;
-  
 }
 
 .show:hover {
@@ -771,7 +771,7 @@ nav li img {
 
 #whats-new {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 4rem;
   margin: 8rem 4rem 0rem 4rem;
   align-items: center;
@@ -787,11 +787,11 @@ nav li img {
 
 .second-promo-images {
   width: 100%;
-  max-width: 50vw;
   display: grid;
   grid-template-rows: 1fr;
   justify-content: center;
-
+  align-items: center;
+  text-align: center;
 }
 
 .promo-image-container-1 img, .promo-image-container-2 img  {
@@ -1057,7 +1057,6 @@ nav li img {
   background: url(/static/BathAbbey1_54kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(2) {
   background: url(/static/BlackSwan_92kb.jpg);
@@ -1073,25 +1072,21 @@ nav li img {
   background: url(/static/DreamCafe_168kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(5) {
   background: url(/static/HokkaidoDeer_56kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(6) {
   background: url(/static/BathAbbeyFrontMorning_72kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(7) {
   background: url(/static/BathSunsetRooftops_91kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(8) {
   background: url(/static/Herbie\ Dehazed\ \(Less\ Red\)\ \(WebReady\).jpg);
@@ -1102,13 +1097,11 @@ nav li img {
   background: url(/static/PultneyBridgeAfterTheStorm_81kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(10) {
   background: url(/static/BathAbbey1_54kb.jpg);
   background-position: center;
   background-size: cover;
-  width: 25vw;
 }
 .marquee-content li:nth-of-type(11) {
   background: url(/static/BlackSwan_92kb.jpg);
@@ -1153,9 +1146,21 @@ nav li img {
   }
 }
 
-.marquee-content li {
+.marquee-content .landscape {
   /* border: 3px solid #ee563b; */
   width: 60vw;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  white-space: nowrap;
+  margin: 1vw;
+}
+
+.marquee-content .portrait {
+  /* border: 3px solid #ee563b; */
+  width: 25vw;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -1532,7 +1537,7 @@ nav li img {
   text-align: center;
   justify-content: center;
   align-items: center;
-  max-width: 650px;
+  max-width: 80vw;
   background-color: rgba(247, 247, 247, 0.8);
   color: var(--primary-color);
 }
@@ -1745,7 +1750,7 @@ nav li img {
 }
 
 #lifetime-updates p {
-  max-width: 40vw;
+  max-width: 45ch;
 }
 
 /* HQ Backgrounds */

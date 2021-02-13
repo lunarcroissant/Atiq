@@ -1,3 +1,11 @@
+/* INDEX */
+
+/* Min-Width 320px */
+/* Min-Width 480px */
+/* Min-Width 768px */
+/* Min-Width 992px */
+/* Min-Width 1200px */
+
 /* CUSTOM PROPERTIES */
 
 :root {
@@ -14,49 +22,18 @@
 
 /* Larger than Tablet */
 
-/* Home */
-
-@media(max-width: 1600px) {
-  
-
-  /* Gallery */
-
-  .portfolio {
-    height: 7000px;
-  }
-
-
-}
-
-@media(max-width: 1379px) {
-  .second-promo {
-    
-  }
-}
+/* Home */  
 
 /* Store */
 
-@media(max-width: 1600px) {
+@media screen and (max-width: 1600px) {
   .regular-nav {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .regular-nav p {
-    font-size: 1rem;
-    align-items: center;
-    text-align: center;
-    padding-top: 6rem;
-    word-wrap: wrap;
-  }
-
-  .store-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-template-rows: repeat(auto-fit), minmax(500px, 1fr);
-    grid-gap: 4rem;
-    padding: 4rem;
-    /* text-align: center; */
+  .regular-nav p:last-of-type {
+    display: none;
   }
 
   .image-box {
@@ -70,11 +47,48 @@
     width:500px;
     height: 500px;
   }
+
+  /* SHOP */
+
+  #project-areas {
+    display: grid;
+    margin: 2rem 4rem;
+    grid-gap: 4rem;
+    height: 75vh;
+    grid-template-areas: 
+    'prints clothing'
+    'prints icons';
+    justify-content: center;
+  }
+
+  #prints {
+    grid-area: prints;
+    width: 40vw;
+  }
+
+  #icon-packs {
+    grid-area: icons;
+    width: 40vw;
+  }
+
+  #clothing {
+    grid-area: clothing;
+    width: 40vw;
+  }
 }
 
-/* @1250PX */
+/* @1200PX */
 
-@media screen and (max-width: 1250px) {
+@media screen and (min-width:768px) and (max-width: 1200px) {
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  .cta-btn {
+    font-size: 2.1rem;
+    padding: 2rem 4rem;
+  }
   .marquee {
     width: 100vw;
     background-color: var(--light-background);
@@ -229,9 +243,169 @@
   }
 }
 
+/* 992PX */
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+
+  .hero-content {
+    letter-spacing: 5rem;
+  }
+
+  .area > img {
+    height: 500px;
+    width: 250px;
+  }
+
+  .presentation-div-project-areas {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: auto;
+    visibility: visible;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  #whats-new {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 4rem;
+    margin: 5rem 1rem 0rem 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-area-selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+    min-width: 25vw;
+  }
+
+  .second-promo-images {
+    width: 100%;
+    max-width: 50vw;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: 4rem;
+  }
+
+  .promo-image-container-1 img, .promo-image-container-2 img  {
+    max-width: 45vw;
+    max-height: 60vw;
+  }
+
+  /* SHOP */
+
+  #project-areas {
+    display: flex;
+    margin: 4rem 4rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #prints {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #main-hero-image {
+    background: url(/static/BlackSwan_92kb.jpg) center center/cover no-repeat;
+  }
+
+  #icon-packs {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #clothing {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #second-shop-section {
+    display: flex;
+    margin: 4rem 4rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #paintings {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #upcoming-projects {
+    width: 100%;
+    height: 45vh;
+  }
+
+}
+
+
+
+
+
+
+
 /* @768PX */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content {
+    letter-spacing: 2.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1.8rem;
+    padding: 1em 1.8em;
+  }
+
+  .small-link {
+    font-size: 1.2rem;
+  }
+
+  /* HOME */
+
+  
+
+  #project-areas-overview {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .area-selector {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .no-show {
+    display: none;
+  }
+
+  .presentation-div-project-areas {
+    justify-content: center;
+    background: url(/static/DreamCafe_168kb) center center/contain no-repeat;
+  }
   .marquee {
     width: 100vw;
     background-color: var(--light-background);
@@ -383,6 +557,55 @@
   .marquee-content li .landscape {
     width: 80vh;
   }
+
+  /* SHOP */
+
+  #project-areas {
+    display: flex;
+    margin: 4rem 4rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #prints {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #main-hero-image {
+    background: url(/static/BlackSwan_92kb.jpg) center center/cover no-repeat;
+  }
+
+  #icon-packs {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #clothing {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #second-shop-section {
+    display: flex;
+    margin: 4rem 4rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #paintings {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #upcoming-projects {
+    width: 100%;
+    height: 45vh;
+  }
 }
 
 /* At 850PX */
@@ -392,10 +615,6 @@
     display: none;
   }
 
-  h1 {
-    font-size: 5.4rem;
-    margin-bottom: 4rem;
-  }
   
   h2 {
     font-size: 4.5rem;
@@ -423,81 +642,13 @@
   
   p {
     font-weight: 200;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.9;
   }
 
   /* Buttons */
 
-  .nav-btn {
-    text-decoration: none;
-    color: var(--primary-color);
-    opacity: 0.9;
-    padding: 0px;
-    font-size: 3rem;
-    margin: 2rem 4rem;
-  }
 
-  .nav-btn-active {
-    text-decoration: none;
-    color: var(--primary-color);
-    opacity: 0.7;
-    padding: 0px;
-    font-size: 3rem;
-    margin: 2rem 4rem;
-  }
-
-  .nav-btn:hover {
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 0px;
-    font-size: 30px;
-    text-decoration: underline;
-    margin: 2rem 4rem;
-  }
-
-  .nav-btn-light {
-    text-decoration: none;
-    color: var(--light-background);
-    opacity: 0.9;
-    padding: 0px;
-    font-size: 30px;
-    margin: 2rem 4rem;
-  }
-
-  .nav-btn-light-active {
-    text-decoration: none;
-    color: var(--light-background);
-    opacity: 0.7;
-    padding: 0px;
-    font-size: 30px;
-    margin: 2rem 4rem;
-  }
-
-  .cta-btn {
-    display: inline-block;
-    font-size: 36px;
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 5px 10px;
-    border: solid var(--primary-color) 4px;
-    margin: 80px 0px;
-    background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
-    background-size: 200%;
-    transition: .4s ease-in-out;
-  }
-
-  .cta-btn:hover {
-    display: inline-block;
-    font-size: 36px;
-    color: var(--light-background);
-    text-decoration: none;
-    padding: 5px 10px;
-    border: solid var(--primary-color) 4px;
-    margin: 80px 0px;
-    background-position: left;
-    /* animation: cta-btn-hover 3s forwards ease-in-out; */
-  }
 
   /* @keyframes cta-btn-hover {
     0% {
@@ -619,14 +770,14 @@
     display: inline-block;
     top: 4rem;
     right: 4rem;
-    z-index: 1;
+    z-index: 3;
   }
 
   .mobile-menu-wrap .toggler {
     position: absolute;
     top: 4rem;
     right: 4rem;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -637,7 +788,7 @@
     position: absolute;
     top: 4rem;
     right: 4rem;
-    z-index: 1;
+    z-index: 3;
     width: 60px;
     height: 60px;
     padding: 1rem;
@@ -650,30 +801,19 @@
 }
 
 @media(max-width: 768px) {
-  .contact-form {
-    display: grid;
-    grid-template-areas: 
-      'contact-form-header'
-      'full-name-field'
-      'email-field'
-      'message'
-      'submit-button';
-    width: 100%;
-    padding: 4rem;
-    margin-top: 6rem;
-    grid-gap: 3rem;
-  }
-}
-
-@media(max-width: 768px) {
   #footer {
-    display: grid;
-    grid-template-areas: 
-      'socials socials'
-      'bold-p bold-p';
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 4rem;
     margin-top: 6rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #footer p {
+    grid-area: copyright;
+    align-items: center;
     text-align: center;
   }
 
@@ -681,24 +821,11 @@
     grid-area: socials;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
   }
 
-  .bold-p {
-    grid-area: bold-p;
-    font-size: 1.6rem;
-  }
-}
-
-/* Home */
-
-@media(max-width: 768px) {
-
-
-
-
-  #prints-promo {
-
-  }
 }
 
 /* About */
@@ -728,44 +855,6 @@
 /* At 850PX */
 
 @media(max-width: 650px) {
-  .submenu {
-    display: none;
-  }
-
-  h1 {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.9rem;
-    padding-bottom: 2rem;
-  }
-  
-  h4 {
-    font-size: 1.8rem;
-    font-weight: 200;
-  }
-  
-  h5 {
-    font-size: 1.7rem;
-    font-weight: 500;
-  }
-  
-  h6 {
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  
-  p {
-    font-weight: 200;
-    font-size: 1.6rem;
-    line-height: 1.9;
-  }
 
   /* Buttons */
 
@@ -810,30 +899,6 @@
     font-size: 1.7rem;
   }
 
-  .cta-btn {
-    display: inline-block;
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 5px 10px;
-    border: solid var(--primary-color) 2px;
-    margin: 20px 0px;
-    background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
-    background-size: 200%;
-    transition: .4s ease-in-out;
-  }
-
-  .cta-btn:hover {
-    display: inline-block;
-    font-size: 1.7rem;
-    color: var(--light-background);
-    text-decoration: none;
-    padding: 5px 10px;
-    border: solid var(--primary-color) 2px;
-    margin: 20px 0px;
-    background-position: left;
-    /* animation: cta-btn-hover 3s forwards ease-in-out; */
-  }
 
   /* @keyframes cta-btn-hover {
     0% {
@@ -942,84 +1007,6 @@
     padding: 1.5rem;
   }
 
-  /* Store */
-
-  .store-grid {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fit), minmax(250px, 1fr);
-    grid-gap: 4rem;
-    padding: 2rem;
-    justify-content: center;
-  }
-  
-  .product-tile {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    /* background: chartreuse; */
-  }
-  
-  .image-box {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .print-hover-overlay {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(17, 17, 17, 0.4);
-    color: var(--light-background);
-    visibility: hidden;
-    opacity: 0;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .print-hover-overlay a {
-    text-decoration: none;
-    color: var(--light-background);
-    font-size: 3rem;
-    font-weight: 500;
-  }
-  
-  .image-box:hover .print-hover-overlay {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .hover-title {
-    font-size: 25px;
-    font-weight: 200;
-  }
-  
-  .product-tile img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .store-category {
-    padding: 0rem 2rem;
-    display: block;
-  }
-
-  .store-divider {
-    width: 25rem;
-    height: 3rem;
-    padding-top: 0px;
-    border: none;
-    background: #111111;
-  }
-
   /* Contact Form */
 
   .contact-form-header {
@@ -1067,14 +1054,14 @@
     /* display: none; */
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 3;
   }
 
   .mobile-menu-wrap .toggler {
     position: absolute;
-    top: 2rem;
+    top: 4rem;
     right: 4rem;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -1083,9 +1070,9 @@
 
   .mobile-menu-wrap .hamburger {
     position: absolute;
-    top: 2rem;
+    top: 4rem;
     right: 4rem;
-    z-index: 1;
+    z-index: 3;
     width: 60px;
     height: 60px;
     padding: 1rem;
@@ -1118,7 +1105,7 @@
   .mobile-menu-wrap .hamburger>div::after {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: -10px;
     width: 100%;
     height: 3px;
@@ -1213,7 +1200,7 @@
   .mobile-menu-wrap .mobile-menu>div>div>ul>li a {
     list-style: none;
     color: #FDFDFD;
-    font-size: 2rem;
+    font-size: 4rem;
     text-decoration: none;
     transition: color 0.4s ease;
   }
@@ -1222,4 +1209,223 @@
     color: var(--accent-color);
   }
 
+}
+
+/* 480PX */
+
+@media screen and (max-width: 480px) {
+
+  /* NAV */
+
+  .regular-nav {
+    margin: 0 2rem;
+  }
+  
+  .hero-nav {
+    margin: 4rem 2rem;
+  }
+
+  /* HOME */
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content {
+    letter-spacing: 2rem;
+    line-height: 5rem;
+    padding: 2rem;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .cta-btn {
+    font-size: 1.6rem;
+    padding: 1em 1.8em;
+    margin: 3rem 2rem;
+  }
+
+  .small-link {
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .view-more-option {
+    display: none;
+  }
+
+  #project-areas-overview {
+    display: none;
+  }
+
+  #whats-new {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .second-promo-content {
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5vh 0;
+    margin: auto;
+  }
+
+  .promo-image-container-1 img, .promo-image-container-2 img  {
+    max-width: 50vw;
+    max-height: 75vw;
+  }
+
+  /* SHOP */
+
+
+  .cta-small {
+    padding: .1rem .5rem;
+    border: var(--primary-color) 2px solid;
+    font-size: 1.6rem;
+  }
+
+  .call-out-new {
+    border: var(--light-background) 2px solid;
+  }
+  .call-out-new-dark {
+    border: var(--primary-color) 2px solid;
+  }
+  .category-and-subfact h6 {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  
+  .category-and-subfact p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  #project-areas {
+    display: flex;
+    margin: 2rem 2rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #prints {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #main-hero-image {
+    background: url(/static/BlackSwan_92kb.jpg) center center/cover no-repeat;
+  }
+
+  #icon-packs {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #clothing {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #second-shop-section {
+    display: flex;
+    margin: 2rem 2rem;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #paintings {
+    width: 100%;
+    height: 45vh;
+  }
+
+  #upcoming-projects {
+    width: 100%;
+    height: 45vh;
+  }
+
+  /* ABOUT */
+
+  #footer {
+    margin-top: 0;
+  }
+
+  /* HAMBURGER MENU */
+
+  .mobile-menu-wrap .toggler {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 4;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .mobile-menu-wrap .hamburger {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mobile-menu-wrap .mobile-menu>div>div>ul>li a {
+    list-style: none;
+    color: #FDFDFD;
+    font-size: 2.5rem;
+    line-height: 8rem;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+
+  /* MARQUEE */
+
+  .marquee-content:hover {
+    /* animation-play-state:paused; */
+  }
+  
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0vw);
+    }
+    100% {
+      transform: translateX(calc(calc(90vw * -6) - calc(160vw * 3) - calc(2vw * 9)));
+    }
+  }
+  .marquee-content .landscape {
+    /* border: 3px solid #ee563b; */
+    width: 160vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    white-space: nowrap;
+    margin: 1vw;
+  }
+  
+  .marquee-content .portrait {
+    /* border: 3px solid #ee563b; */
+    width: 90vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    white-space: nowrap;
+    margin: 1vw;
+  }
 }

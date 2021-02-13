@@ -504,3 +504,67 @@
 #footer {
   border: 0;
 }
+
+
+/* UPCOMING PROJECTS MOBILE CSS */
+
+/* 1200-1600PX */
+
+@media screen and (min-width: 1201px) and (max-width:1600px) {
+
+  #chess-story h2 {
+    font-size: 3rem;
+    line-height: 5rem;
+
+  }
+
+}
+
+/* 992 - 1200PX */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  #chess-story h2 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  #chess-benefits h3, #chess-benefits p {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #chess-benefits div>:nth-of-type(2) {
+    justify-content: center;
+  }
+
+}
+
+/* 768 - 992PX */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  #chess-story h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+}
+
+/* 481 - 768PX */
+
+@media screen and (max-width: 768px) {
+  
+  #chess-story {
+    padding-top: 5vh;
+  }
+  
+  #chess-story h2 {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    position: unset;
+    width: 80vw;
+    margin-top: 5vh;
+    font-weight: 300;
+  }
+
+}
