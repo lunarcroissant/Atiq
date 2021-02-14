@@ -58,7 +58,6 @@
   width: 50%;
   /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
   background: var(--light-background);
-  position: relative;
 }
 
 .clothing-hero-pic {
@@ -70,7 +69,6 @@
   align-items: right;
   justify-content: right;
   text-align: right;
-  position: absolute;
 }
 .clothing-hero-pic img {
   height: 675px;
@@ -78,8 +76,6 @@
   /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
   position: relative;
   object-fit: cover;
-  position: absolute;
-  right: 0;
 }
 
 /* Hero Image Info */
@@ -387,7 +383,7 @@
 
 #chess-benefits > div {
  margin: 6rem;
- max-width: 800px;
+ max-width: 110ch;
 }
 
 #chess-benefits > div:nth-of-type(2) {
@@ -505,6 +501,133 @@
   border: 0;
 }
 
+/* CLOTHING MOBILE CSS */
+
+@media screen and (max-width: 1400px) {
+
+  #clothing-second-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .clothing-image-left {
+    display: none;
+  }
+
+  #clothing-third-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .third-section-clothing-image-left {
+    justify-content: right;
+    width: 100%;
+    margin: auto;
+    align-items: right;
+    text-align: right;
+  }
+
+  #locally-screenprinted {
+    width: 100%;
+    text-align: right;
+  }
+
+  #free-shipping {
+    text-align: left;
+    margin-top: 5vh;
+  }
+}
+
+/* 992PX */
+
+@media screen and (max-width: 992px) {
+  #hero-heading {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .highlight-box {
+    width: 10%;
+    margin-top: 5vh;
+    align-self: center;
+  }
+
+  #hero-heading p {
+    display: none;
+  }
+
+  #clothing-hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0rem;
+  }
+
+  .clothing-hero-pic-shadow {
+    height: 675px;
+    width: 100%;
+    /* box-shadow: inset 0 0 40px 5px var(--tertiary-action-color); */
+    background: var(--light-background);
+  }
+
+  .clothing-hero-pic-shadow {
+    justify-self: center;
+  }
+
+  .clothing-hero-pic {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+  .clothing-hero-pic img {
+    text-align: center;
+  }
+
+  .clothing-description {
+    align-self: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    margin-top: 10%;
+  }
+
+  .image-shout-icon-paintings {
+    display: none;
+  }
+
+  .project-info-section {
+    text-align: left;
+    margin-top: 5vh;
+  }
+
+  #clothing-fourth-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #clothing-fourth-section-right-text {
+    display: none;
+  }
+  
+}
+
+/* 768PX */
+
+@media screen and (max-width:768px) {
+  #clothing-second-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 /* UPCOMING PROJECTS MOBILE CSS */
 
@@ -515,7 +638,6 @@
   #chess-story h2 {
     font-size: 3rem;
     line-height: 5rem;
-
   }
 
 }
@@ -533,8 +655,20 @@
     justify-content: center;
   }
 
-  #chess-benefits div>:nth-of-type(2) {
+  #chess-benefits {
     justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    padding: none;
+  }
+  
+  #chess-benefits > div:nth-of-type(2) {
+   align-self: center;
+  }
+  
+  #chess-benefits > div:nth-of-type(4) {
+   align-self: center;
   }
 
 }
@@ -547,6 +681,27 @@
     line-height: 3rem;
   }
 
+  #chess-benefits h3, #chess-benefits p {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #chess-benefits {
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    padding: none;
+  }
+  
+  #chess-benefits > div:nth-of-type(2) {
+   align-self: center;
+  }
+  
+  #chess-benefits > div:nth-of-type(4) {
+   align-self: center;
+  }
+
 }
 
 /* 481 - 768PX */
@@ -556,15 +711,46 @@
   #chess-story {
     padding-top: 5vh;
   }
+
+  #upcoming-hero-heading .highlight-box, #upcoming-hero-heading .right-side-details {
+    display: none;
+  }
+
+  #upcoming-hero-heading {
+    justify-content: center;
+  }
   
   #chess-story h2 {
     display: block;
     font-size: 1.6rem;
     line-height: 4rem;
     position: unset;
-    width: 80vw;
+    width: 100vw;
     margin-top: 5vh;
     font-weight: 300;
+  }
+
+  #chess-benefits h3, #chess-benefits p {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #chess-benefits {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    margin: auto;
+    padding: 0;
+    
+  }
+  
+  #chess-benefits > div:nth-of-type(2) {
+   align-self: center;
+  }
+  
+  #chess-benefits > div:nth-of-type(4) {
+   align-self: center;
   }
 
 }
