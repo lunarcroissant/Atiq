@@ -789,7 +789,7 @@ nav li img {
 
 .second-promo-content {
   justify-content: center;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   padding: 5vh 0;
   max-width: 80vw;
@@ -1424,7 +1424,7 @@ nav li img {
 }
 
 .upcoming-projects-image {
-  background: url(/static/KOLOROK_RedTeam_750px.jpg) center top/cover no-repeat;
+  background: url(/static/KOLOROK_RedTeam_750px.jpg) center center/cover no-repeat;
   width: 100%;
   height: 100%;
   margin-bottom: var(--product-area-tile-image-margin-bottom);
