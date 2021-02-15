@@ -1166,7 +1166,7 @@
   .mobile-menu-wrap .mobile-menu>div>div>ul {
     display: flex;
     flex-direction: column;
-    line-height: 2;
+    line-height: 8em;
   }
 
   .mobile-menu-wrap .mobile-menu>div>div>ul>li {
@@ -1177,7 +1177,7 @@
   .mobile-menu-wrap .mobile-menu>div>div>ul>li a {
     list-style: none;
     color: #FDFDFD;
-    font-size: 4rem;
+    font-size: calc(2.5vw + 2rem);
     text-decoration: none;
     transition: color 0.4s ease;
   }
@@ -1365,8 +1365,8 @@
   .mobile-menu-wrap .mobile-menu>div>div>ul>li a {
     list-style: none;
     color: #FDFDFD;
-    font-size: 2.5rem;
-    line-height: 8rem;
+    font-size: calc(2.5vw + 2rem);
+    line-height: 3em;
     text-decoration: none;
     transition: color 0.4s ease;
   }
