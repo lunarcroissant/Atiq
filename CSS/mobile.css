@@ -27,10 +27,7 @@
 /* Store */
 
 @media screen and (max-width: 1600px) {
-  .regular-nav {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+  
 
   .regular-nav p:last-of-type {
     display: none;
@@ -66,6 +63,15 @@
     width: 40vw;
   }
 
+  #main-hero-image {
+    width: 100%;
+    height: 100%;
+    /* min-height: 100%; */
+    background: url(/static/Dream\ Cafe_91kb_1000x1500.jpg) center center/cover no-repeat;
+    position: relative;
+    margin-bottom: var(--product-area-tile-image-margin-bottom);
+  }
+
   #icon-packs {
     grid-area: icons;
     width: 40vw;
@@ -75,6 +81,8 @@
     grid-area: clothing;
     width: 40vw;
   }
+
+  
 }
 
 /* @1200PX */
@@ -309,7 +317,8 @@
   #project-areas {
     display: flex;
     margin: 4rem 4rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -319,6 +328,7 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #main-hero-image {
@@ -329,18 +339,21 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #clothing {
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #second-shop-section {
     display: flex;
     margin: 4rem 4rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -350,12 +363,14 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #upcoming-projects {
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
 }
@@ -568,7 +583,8 @@
   #project-areas {
     display: flex;
     margin: 4rem 4rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -578,6 +594,7 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #main-hero-image {
@@ -588,18 +605,21 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #clothing {
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #second-shop-section {
     display: flex;
     margin: 4rem 4rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -608,11 +628,13 @@
   #paintings {
     width: 100%;
     height: 45vh;
+    margin-bottom: 2rem;
   }
 
   #upcoming-projects {
     width: 100%;
     height: 45vh;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1281,7 +1303,8 @@
   #project-areas {
     display: flex;
     margin: 2rem 2rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -1291,6 +1314,7 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #main-hero-image {
@@ -1301,18 +1325,21 @@
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #clothing {
     width: 100%;
     height: 45vh;
     min-height: 500px;
+    margin-bottom: 2rem;
   }
 
   #second-shop-section {
     display: flex;
     margin: 2rem 2rem;
-    grid-gap: 4rem;
+    /* Will use gap once iOS Mobile works */
+    /* grid-gap: 4rem; */
     flex-direction: column;
     justify-content: center;
     height: auto;
@@ -1321,11 +1348,13 @@
   #paintings {
     width: 100%;
     height: 45vh;
+    margin-bottom: 2rem;
   }
 
   #upcoming-projects {
     width: 100%;
     height: 45vh;
+    margin-bottom: 2rem;
   }
 
   /* ABOUT */
