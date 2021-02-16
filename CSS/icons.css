@@ -112,7 +112,7 @@
   }
 
   h1 {
-    font-size: 6rem;
+    /* font-size: 6rem; */
     margin-bottom: 2rem;
   }
   
@@ -470,6 +470,10 @@
 
   .hero-title {
     font-size: 5rem;
+  }
+
+  #icons-view-more-option {
+    display: none;
   }
 
 }
