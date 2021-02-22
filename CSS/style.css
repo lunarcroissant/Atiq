@@ -448,8 +448,8 @@ p {
   width: 100%;
 }
 .form-light input:focus, textarea:focus {
-  border: var(--tertiary-action-color) solid 3px;
-  outline: var(--tertiary-action-color) solid 3px;
+  border: #ff6759 solid 3px;
+  outline:  #ff6253  solid 3px;
 }
 
 .form-light label {
@@ -1368,6 +1368,26 @@ nav li img {
   margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
+#main-hero-image:hover, #main-hero-image:focus {
+  background-size: 105%;
+  /* transform: scale(1.1); */
+  /* transition: ease-in 500ms; */
+  transition: all 500ms;
+  /* animation: shop-tile-zoom 1s both 100ms forwards; */
+  
+}
+
+#main-hero-image:not(:hover) {
+  /* background-size: 100%; */
+  transition: ease-in 500ms;
+}
+
+@keyframes shop-tile-zoom {
+  100% {
+    background-size: 105%;
+  }
+}
+
 .tile-info {
   display: flex;
   flex-direction: row;
@@ -1402,6 +1422,14 @@ nav li img {
   text-decoration: none;
   font-size: 20px;
   line-height: 1.9;
+  background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
+  background-size: 200%;
+}
+
+.cta-small:hover {
+  background-position: left;
+  color: var(--light-background);
+  transition: 500ms ease-in-out;
 }
 
 /* CLOTHING */
@@ -1420,6 +1448,16 @@ nav li img {
   margin-bottom: var(--product-area-tile-image-margin-bottom);
 }
 
+#large-square-image:hover {
+  background-size: 105%;
+  transition: ease-in 500ms;
+}
+
+#large-square-image:not(:hover) {
+  /* background-size: 100%; */
+  transition: ease-in 500ms;
+}
+
 /* ICONS */
 
 #icon-packs {
@@ -1435,6 +1473,16 @@ nav li img {
   margin-bottom: var(--product-area-tile-image-margin-bottom);
   position: relative;
 }
+
+.thin-horizontal-image:hover {
+  background-size: 230%;
+  transition: ease-in-out 1500ms;
+}
+
+.thin-horizontal-image:not(:hover) {
+  transition: ease-in-out 500ms;
+}
+
 
 /* STORE NAV */
 
@@ -1467,6 +1515,16 @@ nav li img {
   position: relative;
 }
 
+.paintings-image:hover {
+  background-size: 105%;
+  transition: ease-in 500ms;
+}
+
+.paintings-image:not(:hover) {
+  /* background-size: 100%; */
+  transition: ease-in 500ms;
+}
+
 /* UPCOMING PROJECTS */
 
 #upcoming-projects {
@@ -1481,6 +1539,16 @@ nav li img {
   height: 100%;
   margin-bottom: var(--product-area-tile-image-margin-bottom);
   position: relative;
+}
+
+.upcoming-projects-image:hover {
+  background-size: 105%;
+  transition: ease-in 500ms;
+}
+
+.upcoming-projects-image:not(:hover) {
+  /* background-size: 100%; */
+  transition: ease-in 500ms;
 }
 
 
