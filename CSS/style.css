@@ -446,11 +446,11 @@ p {
   display: inline-block;
   padding: 1.5rem;
   width: 100%;
-  background: rgba(247, 247, 247, 0.8)
+  background: rgba(247, 247, 247, 0.8);
 }
 .form-light input:focus, textarea:focus {
-  border: #ff6759 solid 3px;
-  outline:  #ff6253  solid 3px;
+  border: rgba(255, 103, 77, 0.8) solid 3px;
+  outline:  rgba(255, 103, 77, 0.8) solid 3px;
 }
 
 .form-light label {
