@@ -357,7 +357,18 @@
   align-items: center;
 }
 .right-side-details svg {
-  margin-top: 10vh;
+  position: sticky;
+  top: 30vh;
+}
+
+/* .right-side-details a {
+  
+  position: sticky;
+} */
+
+.arrow-box {
+  height: 100vh;
+  margin-top: 20vh;
 }
 
 #upcoming-page-transition {
