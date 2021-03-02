@@ -7,7 +7,7 @@
   padding-left: 175px;
   padding-right: 125px;
   position: relative;
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
 }
 
 .print-gallery-river-regular {
@@ -17,7 +17,17 @@
   padding-left: 175px;
   padding-right: 125px;
   position: relative;
-  margin-top: 65vh;
+  /* margin-top: 65vh; */
+}
+
+.individual-print-wrapper {
+  height: 100vh;
+  justify-content: center;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
 }
 
 .print-gallery-river-regular:last-of-type {
@@ -27,14 +37,14 @@
   padding-left: 175px;
   padding-right: 125px;
   position: relative;
-  margin-top: 65vh;
-  margin-bottom: 10vh;
+  /* margin-top: 65vh; */
+  /* margin-bottom: 10vh; */
 }
 
 #print-gallery-river-1:last-child {
   align-items: right;
-  justify-content: flex-end;
-  text-align: right;
+  /* justify-content: flex-end; */
+  /* text-align: right; */
 }
 
 .picture-frame-portrait {
