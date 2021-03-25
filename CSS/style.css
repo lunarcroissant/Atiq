@@ -490,7 +490,9 @@ p {
 /* SHOWCASE & NAVBAR */
 
 .hero-nav {
-  margin: 4rem 4rem;
+  padding: 4rem 4rem;
+  animation: slideDown 800ms ease-in-out forwards;
+  height: 15vh;
 }
 
 .hero-nav ul {
@@ -542,9 +544,31 @@ p {
   width: 100vw;
   background: url(/static/KOLOROK\ HERO\ IMAGE\ 1600px-min.jpg) top center/cover no-repeat;
   position: relative;
-  filter: blur(38px);
+  filter: blur(calc(10px + 1vw));
+  /* filter: blur(38px); */
   overflow: hidden;
-  
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /* .hero-image {
@@ -571,6 +595,7 @@ p {
   letter-spacing: 8em;
   position: relative;
   color: rgb(37, 37, 37);
+  animation: slideDown 800ms ease-in-out;
 }
 
 .redcircle {
@@ -580,9 +605,11 @@ p {
   right: 10%;
   border-radius: 50%;
   color: #EF5C4E;
-  width: 20rem;
-  height: 20rem;
-  filter: blur(55px);
+  width: calc(200px + 1vw);
+  /* height: 20rem; */
+  height: calc(200px + 1vw);
+  /* filter: blur(55px); */
+  filter: blur(calc(40px + 0.5vw));
 }
 
 .actions {
@@ -591,6 +618,7 @@ p {
   width: 100vw;
   position: relative;
   align-items: center;
+  animation: slideDown 800ms ease-in-out;
 
 }
 
@@ -1298,6 +1326,10 @@ nav li img {
   overflow-x: hidden;
 }
 
+.slideUp {
+  animation: slideDown 500ms ease-in-out forwards;
+}
+
 .shop-area-overlay {
   position: absolute;
   display: flex;
@@ -1402,6 +1434,7 @@ nav li img {
   flex-direction: column;
   text-align: left;
   align-items: left;
+  animation: slideDown 900ms ease-in-out forwards;
 }
 
 .category-and-subfact h6 {
@@ -1425,6 +1458,7 @@ nav li img {
   line-height: 1.9;
   background: linear-gradient(to left, transparent 50%, var(--primary-color) 50%) right;
   background-size: 200%;
+  animation: slideDown 1400ms ease-in-out forwards;
 }
 
 .cta-small:hover {
@@ -1724,6 +1758,8 @@ nav li img {
   color: var(--primary-color);
   background: var(--light-background);
   border: var(--primary-color) 3px solid;
+  max-width: 400px;
+  height: 7rem;
   width: 50%;
   justify-self: center;
   cursor: pointer;
