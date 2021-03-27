@@ -638,7 +638,7 @@ p {
   letter-spacing: 8em;
   position: relative;
   color: rgb(37, 37, 37);
-  opacity: 0;
+  opacity: 1;
   /* animation: slideDown 800ms ease-in-out; */
 }
 
@@ -662,7 +662,7 @@ p {
   width: 100vw;
   position: relative;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   /* animation: slideDown 800ms ease-in-out; */
 
 }
