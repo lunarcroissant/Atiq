@@ -61,6 +61,7 @@ html {
 body {
   background: var(--light-background);
   overflow-x: hidden;
+  position: relative;
 }
 
 #logo {
@@ -487,12 +488,40 @@ p {
   justify-content: left;
 }
 
+/* PRELOADER */
+
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 3;
+
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2s ease-out;
+  /* text-align: center; */
+}
+
+#loadProgress {
+  /* width: 100vw; */
+  height: 3px;
+  background: var(--light-background);
+  margin-top: 4vh;
+  opacity: 1;
+  transition: width 5s ease;
+}
+
 /* SHOWCASE & NAVBAR */
 
 .hero-nav {
   padding: 4rem 4rem;
-  animation: slideDown 800ms ease-in-out forwards;
-  height: 15vh;
+  /* animation: slideDown 800ms ease-in-out forwards; */
+  /* height: 15vh; */
 }
 
 .hero-nav ul {
@@ -790,6 +819,10 @@ nav li img {
   position: absolute;
   right: 0;
   object-fit: cover;
+}
+
+.second-promo-content {
+  cursor: crosshair, auto;
 }
 
 #area-image-prints {
