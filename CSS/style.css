@@ -600,6 +600,20 @@ p {
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 800ms ease-out;
+}
+
 /* .hero-image {
   grid-row: 1 / span 2;
   grid-column: 2;
@@ -624,7 +638,8 @@ p {
   letter-spacing: 8em;
   position: relative;
   color: rgb(37, 37, 37);
-  animation: slideDown 800ms ease-in-out;
+  opacity: 0;
+  /* animation: slideDown 800ms ease-in-out; */
 }
 
 .redcircle {
@@ -647,7 +662,8 @@ p {
   width: 100vw;
   position: relative;
   align-items: center;
-  animation: slideDown 800ms ease-in-out;
+  opacity: 0;
+  /* animation: slideDown 800ms ease-in-out; */
 
 }
 
