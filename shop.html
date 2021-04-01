@@ -53,6 +53,25 @@
     </nav>
   </header>
 
+  <!-- Loading Screen -->
+
+  <!-- <div id="loadingScreen">
+    <svg id="loadLogo" width="calc(50px + 1vw)" height="calc(50px + 1vw)" viewBox="0 0 50 50" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+        <path id="clipLoadedRect" fill-rule="evenodd" clip-rule="evenodd"
+          d="M41.1581 16.7232L25.0641 26.0225V46.272L37.9407 38.8318L37.9271 18.5902L41.1581 16.7232V36.9772L44.3827 38.8375L25.0637 50L21.8371 48.1385L21.8326 24.1555L37.9242 14.8577L41.1581 16.7232V16.7232ZM15.4049 20.4473V44.4315L18.6151 46.2833V22.2993L15.4049 20.4473ZM15.1197 9.45283L5.7454 14.8692V38.8588L2.53906 37.0092V13.0195L25.0719 0L47.6044 12.999L47.6016 36.9815L44.5324 35.2102L44.3756 14.8645L44.3747 14.865L37.9206 11.1417L25.0577 18.5738L21.8502 16.7233L34.7537 9.2675L31.5239 7.40433L12.1774 18.5827V42.5695L8.98223 40.7262L8.9659 16.73L18.3426 11.312L15.1197 9.45283V9.45283ZM17.0991 19.4685L20.3104 17.613L23.5166 19.4627L20.3052 21.3182L17.0991 19.4685V19.4685ZM18.3192 7.60417L21.5421 9.46333L28.2716 5.57517L25.0486 3.71583L18.3192 7.60417V7.60417Z"
+          fill="#f3f3f3" />
+      </g>
+      <defs>
+        <clipPath id="clipLoaded">
+          <rect width="50" height="50" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    <div id="loadProgress"></div>
+  </div> -->
+
   <!-- NEW SHOP LAYOUT -->
 
   <div id="project-areas">
@@ -106,6 +125,63 @@
       </div>
     </div>
   </div>
+
+  <!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+
+  <script>
+
+    // alert('All done');
+    let loadProgress = document.getElementById('loadProgress');
+    let logo = document.getElementById('loadLogo');
+    let shopAreas = document.getElementsById('project-areas');
+
+    // document.getElementById('loadingScreen').style.background = '#FFF';
+
+    var queue = new createjs.LoadQueue(false);
+
+    queue.on("progress", event => {
+      alert('All done');
+      console.log(event);
+      let progress = Math.floor(event.progress * 100);
+      this.loadProgress.style.width = progress + '%';
+      if (progress == 100) {
+        alert('All done');
+        document.querySelector('project-areas').style.background = 'red';
+        document.getElementById('loadingScreen').style.display = 'none';
+        document.getElementById('loadingScreen').style.background = '#FFF';
+        // document.getElementById('loadingScreen').style.background = 'none';
+        document.getElementById('clipLoadedRect').style.fill = '#252525';
+        document.getElementById('clipLoadedRect').style.opacity = '0';
+        document.getElementById('loadProgress').style.opacity = '0';
+      }
+    });
+
+    queue.on("complete", event => {
+      shopAreas.classList.add('slideUp');
+
+      loadProgress.classList.add('fadeOut');
+    });
+
+    // queue.on("fileload", handleFileComplete);
+    // queue.loadFile('url(/static/Cactus_121kb.jpg)');
+    // queue.loadFile('/static/CrocoFishWoods_1000pxW_200kb.jpg)');
+    // queue.loadFile('url(/static/IconsHeroImage_91kb_1191x795.jpg)');
+    // queue.loadFile('url(/static/Cactus_121kb.jpg)');
+    // queue.loadFile('/stat');
+
+    // function handleFileComplete(event) {
+
+    //   var item = event.item;
+    //   var type = item.type;
+
+    //   if (type == createjs.Types.IMAGE) {
+    //     // shopAreas.appendChild(event.result);
+    //   }
+
+    // }
+
+
+  </script> -->
 
   <div id="second-shop-section">
 

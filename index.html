@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="./CSS/mobile.css">
   <script src="main.js" defer></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
   <!-- <link rel="icon" href="/static/Atiq Logo 32px.png" type="imagepng"/> -->
   <!-- <link rel="icon" type="image/png" href="/static/Atiq Logo 32px.png"/> -->
   <link rel='shortcut icon' type='image/x-icon' href='/static/Atiq Logo 32px.png' />
@@ -22,7 +24,8 @@
 <body>
 
   <div id="loadingScreen">
-    <svg id="loadLogo" width="5vw" height="5vw" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="loadLogo" width="calc(25px + 5vw)" height="calc(25px + 5vw)" viewBox="0 0 50 50" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0)">
         <path id="clipLoadedRect" fill-rule="evenodd" clip-rule="evenodd"
           d="M41.1581 16.7232L25.0641 26.0225V46.272L37.9407 38.8318L37.9271 18.5902L41.1581 16.7232V36.9772L44.3827 38.8375L25.0637 50L21.8371 48.1385L21.8326 24.1555L37.9242 14.8577L41.1581 16.7232V16.7232ZM15.4049 20.4473V44.4315L18.6151 46.2833V22.2993L15.4049 20.4473ZM15.1197 9.45283L5.7454 14.8692V38.8588L2.53906 37.0092V13.0195L25.0719 0L47.6044 12.999L47.6016 36.9815L44.5324 35.2102L44.3756 14.8645L44.3747 14.865L37.9206 11.1417L25.0577 18.5738L21.8502 16.7233L34.7537 9.2675L31.5239 7.40433L12.1774 18.5827V42.5695L8.98223 40.7262L8.9659 16.73L18.3426 11.312L15.1197 9.45283V9.45283ZM17.0991 19.4685L20.3104 17.613L23.5166 19.4627L20.3052 21.3182L17.0991 19.4685V19.4685ZM18.3192 7.60417L21.5421 9.46333L28.2716 5.57517L25.0486 3.71583L18.3192 7.60417V7.60417Z"
@@ -78,18 +81,70 @@
   </script>
 
   <header>
-    <div class="hero-background">
+    <div id="heroBackground" class="hero-background">
       <div class="redcircle"></div>
+      <div class="dark-mode-background"></div>
     </div>
     <div class="showcase-container">
       <nav class="hero-nav">
         <ul class="flex-row">
-          <li><a class="nav-btn-icon" href="index.html"><img src="./static/Atiq Logo (Black).png" alt="Atiq Logo"></a>
+          <li><a class="nav-btn-icon" href="index.html"><svg width="100" height="100" viewBox="0 0 150 150" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M121.016 51.3913L75.2234 77.8505V135.467L111.862 114.297L111.823 56.7034L121.016 51.3913V109.02L130.191 114.313L75.2224 146.074L66.0418 140.778L66.029 72.5385L111.815 46.0833L121.016 51.3913ZM47.7402 61.9877V130.23L56.8742 135.5V67.2573L47.7402 61.9877ZM46.9286 30.7047L20.2558 46.1162V114.374L11.1328 109.111V40.8533L75.246 3.80859L139.358 40.7946L139.35 109.033L130.617 103.992L130.171 46.1029L130.169 46.1042L111.805 35.51L75.2058 56.6567L66.0791 51.3915L102.794 30.1778L93.6037 24.876L38.5571 56.6821V124.932L29.4656 119.687L29.4193 51.4106L56.0989 35.995L46.9286 30.7047ZM52.5606 59.2026L61.6977 53.9231L70.8203 59.186L61.6832 64.4653L52.5606 59.2026ZM56.0321 25.4446L65.2025 30.7349L84.3499 19.6715L75.1796 14.3811L56.0321 25.4446Z"
+                  fill="var(--primary-color)" />
+              </svg>
+            </a>
           </li>
           <li><a class="nav-btn mobile-off" href="about.html">ABOUT</a></li>
           <li><a class="nav-btn mobile-off" href="upcoming-projects.html">UPCOMING</a></li>
           <li><a class="nav-btn mobile-off" href="prints.html">GALLERY</a></li>
           <li><a class="nav-btn mobile-off" href="shop.html">SHOP</a></li>
+          <li>
+            <div class="toggle-container">
+              <input type="checkbox" id="switch" name="theme">
+              <label for="switch">Toggle</label>
+            </div>
+          </li>
+          <script>
+
+            var checkbox = document.querySelector('input[name=theme]');
+            var doltheme = window.localStorage.getItem('theme');
+
+            checkbox.addEventListener('change', function () {
+              if (this.checked) {
+
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+                window.localStorage.setItem('theme', 'dark');
+
+              } else {
+
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+                window.localStorage.setItem('theme', 'light');
+
+              }
+            })
+
+            let trans = () => {
+              document.documentElement.classList.add('transition');
+              window.setTimeout(() => {
+                document.documentElement.classList.remove('transition');
+              }, 1000)
+            }
+
+            function checksettheme() {
+              if (doltheme == "dark") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                $('input[type="checkbox"]').attr("checked", "checked");
+              } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+              }
+            }
+
+
+          </script>
           <div class="mobile-menu-wrap">
             <input type="checkbox" class="toggler">
             <div class="hamburger">
@@ -118,9 +173,11 @@
         <div class="view-more-option">
           <a href="#project-areas-overview" class="small-link view-more">VIEW MORE</a>
           <svg width="15" height="114" viewBox="0 0 15 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8.07031" width="111" height="2" transform="rotate(90 8.07031 0)" fill="#252525" />
-            <rect x="1.41406" y="104.586" width="10" height="2" transform="rotate(45 1.41406 104.586)" fill="#252525" />
-            <rect x="14.1406" y="106" width="10" height="2" transform="rotate(135 14.1406 106)" fill="#252525" />
+            <rect x="8.07031" width="111" height="2" transform="rotate(90 8.07031 0)" fill="var(--primary-color)" />
+            <rect x="1.41406" y="104.586" width="10" height="2" transform="rotate(45 1.41406 104.586)"
+              fill="var(--primary-color)" />
+            <rect x="14.1406" y="106" width="10" height="2" transform="rotate(135 14.1406 106)"
+              fill="var(--primary-color)" />
           </svg>
         </div>
       </div>
@@ -276,8 +333,8 @@
   <footer id="footer" class="footer">
     <p>Copyright &copy; <span class="bold-p">Atiq</span> 2021</p>
     <div class="socials">
-      <a href="https://www.instagram.com/atiq.studios/">Instagram</a>
-      <a href="https://www.facebook.com/atiq.studios">Facebook</a>
+      <a href="https://www.instagram.com/atiq.studios/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/atiq.studios" target="_blank">Facebook</a>
     </div>
   </footer>
 
