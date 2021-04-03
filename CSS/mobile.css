@@ -664,9 +664,8 @@
   .cta-btn-underlined {
     display: inline-block;
     font-size: 36px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--primary-color);
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
   }
@@ -674,7 +673,6 @@
   .cta-btn-underlined:hover {
     display: inline-block;
     font-size: 36px;
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
     animation: cta-btn-underlined 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -692,9 +690,8 @@
   .cta-btn-underlined-dark {
     display: inline-block;
     font-size: 36px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--light-background);
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
     background: linear-gradient(to left, transparent 50%, var(--light-background) 50%) right;
@@ -705,7 +702,6 @@
   .cta-btn-underlined-dark:hover {
     display: inline-block;
     font-size: 36px;
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
     color: var(--primary-color);
@@ -914,9 +910,9 @@
   .cta-btn-underlined {
     display: inline-block;
     font-size: 1.7rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--primary-color);
-    padding: 5px 10px;
+    padding: 5px 0px;
     border: none;
     margin: 40px 0px;
   }
@@ -924,7 +920,7 @@
   .cta-btn-underlined:hover {
     display: inline-block;
     font-size: 1.7rem;
-    padding: 5px 10px;
+    padding: 5px 0px;
     border: none;
     margin: 40px 0px;
     animation: cta-btn-underlined 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -942,9 +938,7 @@
   .cta-btn-underlined-dark {
     display: inline-block;
     font-size: 1.7rem;
-    text-decoration: underline;
     color: var(--light-background);
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
     background: linear-gradient(to left, transparent 50%, var(--light-background) 50%) right;
@@ -955,7 +949,6 @@
   .cta-btn-underlined-dark:hover {
     display: inline-block;
     font-size: 1.7rem;
-    padding: 5px 10px;
     border: none;
     margin: 40px 0px;
     color: var(--primary-color);
