@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atiq | Creative Projects</title>
   <link rel="stylesheet" href="./CSS/style.css">
-  <!-- <link rel="stylesheet" href="./CSS/mobile.css"> -->
+  <link rel="stylesheet" href="./CSS/mobile.css">
   <script src="main.js" defer></script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -107,8 +107,8 @@
           <li><a class="nav-btn mobile-off" href="shop.html">SHOP</a></li>
           <li>
             <div class="toggle-container">
-              <input type="checkbox" id="switch" name="theme">
-              <label for="switch">Toggle</label>
+              <input type="checkbox" id="dark-mode-switch" name="theme">
+              <label id="dark-mode-label-switch" for="dark-mode-switch">DARK MODE</label>
             </div>
           </li>
           <script>
@@ -122,12 +122,14 @@
                 trans()
                 document.documentElement.setAttribute('data-theme', 'dark')
                 window.localStorage.setItem('theme', 'dark');
+                document.getElementById('dark-mode-label-switch').innerHTML = "LIGHT MODE";
 
               } else {
 
                 trans()
                 document.documentElement.setAttribute('data-theme', 'light')
                 window.localStorage.setItem('theme', 'light');
+                document.getElementById('dark-mode-label-switch').innerHTML = "DARK MODE";
 
               }
             })
@@ -176,12 +178,13 @@
       <div class="actions">
         <a class="cta-btn" href="shop.html">Explore & Shop</a>
         <div class="view-more-option">
-          <a href="#project-areas-overview" class="small-link view-more">VIEW MORE</a>
-          <svg width="15" height="114" viewBox="0 0 15 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8.07031" width="111" height="2" transform="rotate(90 8.07031 0)" fill="var(--primary-color)" />
-            <rect x="1.41406" y="104.586" width="10" height="2" transform="rotate(45 1.41406 104.586)"
+          <a href="#project-areas-overview" class="small-link view-more">SCROLL DOWN FOR MORE</a>
+          <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.07031 0L8.07031 16.5L6.07031 16.5L6.07032 -8.74262e-08L8.07031 0Z"
               fill="var(--primary-color)" />
-            <rect x="14.1406" y="106" width="10" height="2" transform="rotate(135 14.1406 106)"
+            <rect x="1.41406" y="10.0859" width="10" height="2" transform="rotate(45 1.41406 10.0859)"
+              fill="var(--primary-color)" />
+            <rect x="14.1406" y="11.5" width="10" height="2" transform="rotate(135 14.1406 11.5)"
               fill="var(--primary-color)" />
           </svg>
         </div>
@@ -234,9 +237,9 @@
       <h2>New Icons have arrived</h2>
       <div class="about-promo-section">
         <div class="about-badge">Overview</div>
-        <p>Limited to 50, 100% plastic free and locally screen printed. To make sure they last, each T-Shirt is
-          made of premium cotton and screen printed by our trusted local experts. Plus, all T-Shirts are produced using
-          100% renewable (wind & solar) energy and environmentally friendly inks.</p>
+        <p>Give your phone a clean and minimalistic look with over 150 custom-designed icons. Available in dark, light
+          and multi-colour themes, each pack lets you customise the most popular apps across iOS and Android. Purchasing
+          a pack gives you lifetime access to all updates and new icons. </p>
       </div>
       <div class="container">
         <a href="icons.html" class="cta-btn-underlined">Discover & download</a>
