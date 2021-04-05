@@ -146,6 +146,10 @@ p {
   font-size: calc(.5vw + 1.6rem);
 }
 
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
 .highlight {
   color: var(--accent-color) !important;
   font-weight: 800 !important;
@@ -1187,7 +1191,7 @@ nav li svg {
   margin: 5vw 5vw;
   /* max-width: 80vw; */
   /* max-width: 50vw; */
-  min-width: 400px;
+  min-width: 350px;
   height: inherit;
   flex: 1;
 }
@@ -1201,7 +1205,7 @@ nav li svg {
   align-items: left;
   text-align: left;
   /* min-height: 400px; */
-  min-width: 400px;
+  min-width: 350px;
   flex: 1;
 }
 
@@ -2211,7 +2215,7 @@ nav li svg {
 #icons-header {
   height: 100vh !important;
   width: 100vw !important;
-  background: url(/static/IconsHeroImage_ThreeiPhones.png) center right/cover no-repeat;
+  /* background: url(/static/IconsHeroImage_ThreeiPhones.png) center right/cover no-repeat; */
   background-size: 54%;
 }
 
@@ -2228,21 +2232,63 @@ nav li svg {
 }
 
 #hero-section-icons {
-  padding: 4rem;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  align-items: baseline;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: 2fr 12fr 1fr; */
+  /* align-items: baseline; */
   list-style: none;
   height: 85vh;
+
   /* background: linear-gradient(to top, rgba(2, 3, 8, 1), rgba(17, 17, 17, 0.01)); */
   /* background: royalblue;
   background-image: linear-gradient(to top, rgb(253, 253, 253, 1), rgba(253, 253, 253, 0.01)); */
+  width: 100vw;
+  animation: slideDown 800ms ease-in forwards;
+}
+
+#hero-section-icons img {
+  /* width: auto; */
+  animation: slideDown 800ms ease-in forwards;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+.icons-hero-middle-section {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.hero-section-icons-content {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  /* width: 50vw; */
+  justify-content: space-around;
+  min-width: 300px;
+  max-width: 40vw;
+}
+
+
+
+.hero-section-image-container {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section-image-container img {
+  height: 100%;
   width: 100%;
 }
 
 .hero-title {
   grid-row: 1;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .feature {
@@ -2256,7 +2302,7 @@ nav li svg {
   list-style: none;
   text-decoration: none;
   line-height: 2;
-  max-width: 35%;
+  max-width: 100%;
 }
 
 .hero-button-wrap {
@@ -2271,6 +2317,7 @@ nav li svg {
   align-items: center;
   text-align: right;
   align-self: flex-end;
+  margin-right: 4em;
 }
 
 #icons-view-more-option a {
@@ -2318,13 +2365,13 @@ nav li svg {
 
 #clean-design p {
   text-align: left;
-  padding: 5rem 0rem;
+  padding: 2em 0rem;
   vertical-align: middle;
 }
 
 #clean-design img {
   max-width: 400px;
-  max-height: 70vh;
+  max-height: 65vh;
   /* transform: skewY(50deg); */
   align-self: right;
 }
@@ -2374,6 +2421,7 @@ nav li svg {
 }
 #lifetime-updates p {
   grid-area: Lifetime-Updates-Copy;
+  padding: 2em 0rem;
 }
 #lifetime-updates img {
   grid-area: Cycle-Icon;
@@ -2403,12 +2451,18 @@ nav li svg {
 }
 
 #hq-backgrounds h2, #hq-backgrounds p {
-  padding: 0rem 1em;
+  /* padding: 0rem 1em; */
   max-width: 800px;
 }
 
+#hq-backgrounds p {
+  padding: 2em 0rem;
+}
+
 #hq-backgrounds h2 {
-  margin: 1em 0;
+  margin-top: 0.5em;
+  display: flex;
+
 
 }
 

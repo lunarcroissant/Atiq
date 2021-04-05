@@ -453,9 +453,9 @@
   /* HERO SECTION */
 
   #hero-section-icons {
-    padding: 2rem;
-    grid-template-rows: 1fr 3fr 1fr;
-    height: 60vh;
+    /* padding: 2rem; */
+    /* grid-template-rows: 1fr 3fr 1fr; */
+    /* height: 60vh; */
   }
 
   .hero-title {
