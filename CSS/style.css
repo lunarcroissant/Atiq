@@ -2252,8 +2252,8 @@ nav li svg {
   animation: slideDown 800ms ease-in forwards;
   min-width: 300px;
   max-width: 1000px;
-  max-height: 85vh;
-  max-height: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .icons-hero-middle-section {
