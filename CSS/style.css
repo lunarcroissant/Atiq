@@ -2256,7 +2256,7 @@ nav li svg {
   /* max-width: 1000px; */
   width: auto;
   min-width: 320px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .icons-hero-middle-section {
@@ -2265,6 +2265,8 @@ nav li svg {
   width: 100vw;
   flex-wrap: wrap-reverse;
   justify-content: center;
+  /* align-items: center;
+  text-align: center; */
   /* justify-content: space-between; */
 }
 
