@@ -2252,7 +2252,7 @@ nav li svg {
   animation: slideDown 800ms ease-in forwards;
   min-width: 300px;
   max-width: 1000px;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 
