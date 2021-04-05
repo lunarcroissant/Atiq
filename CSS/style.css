@@ -141,6 +141,11 @@ p {
   font-size: 1.4rem;
 }
 
+.unbold-300 {
+  font-weight: 300;
+  font-size: calc(.5vw + 1.6rem);
+}
+
 .highlight {
   color: var(--accent-color) !important;
   font-weight: 800 !important;
@@ -543,16 +548,23 @@ p {
 /* Inputs & Forms */
 
 .form-light input, textarea {
-  border: var(--primary-color) solid 3px;
+  border: none;
+  border-bottom: var(--primary-color) solid 2px;
+  /* border: none; */
   font-size: 3rem;
   display: inline-block;
   padding: 1.5rem;
   width: 100%;
-  background: rgba(247, 247, 247, 0.8);
+  font-family: 'Roboto', sans-serif;
+  /* background: rgba(247, 247, 247, 0.8); */
+  background: none;
 }
 .form-light input:focus, textarea:focus {
-  border: rgba(255, 103, 77, 0.8) solid 3px;
-  outline:  rgba(255, 103, 77, 0.8) solid 3px;
+  /* border: rgba(255, 103, 77, 0.8) solid 3px; */
+  border: none;
+  border-bottom: rgba(255, 103, 77, 0.8) solid 2px;
+  outline: none;
+  /* outline:  rgba(255, 103, 77, 0.8) solid 3px; */
 }
 
 .form-light label {
@@ -573,7 +585,7 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 8rem 4rem;
+  margin: 10em auto;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -587,6 +599,13 @@ p {
   align-items: left;
   text-align: left;
   justify-content: left;
+}
+
+.underline {
+  width: inherit;
+  height: 2px;
+  background: var(--light-background);
+  opacity: 0.5;
 }
 
 /* PRELOADER */
@@ -673,9 +692,9 @@ p {
   margin-left: auto;
 }
 
-.flex-row li:nth-child(2) {
+/* .flex-row li:nth-child(2) {
   margin-left: auto;
-}
+} */
 
 .dark-mode-toggle {
   all: unset;
@@ -2004,11 +2023,12 @@ nav li svg {
 }
 
 .store-divider {
-  width: 25rem;
-  height: 3rem;
+  width: 90%;
+  height: 2px;
   padding-top: 0px;
   border: none;
-  background: #111111;
+  background: #686868;
+  margin: 3em 0;
 }
 
 .store-grid {
@@ -2144,6 +2164,8 @@ nav li svg {
 .contact-form-header {
   grid-area: contact-form-header;
   font-size: 3.6rem;
+  margin: auto;
+  width: 100vw;
 }
 
 .full-name-field {
@@ -2165,34 +2187,37 @@ nav li svg {
 
 .submit-button {
   grid-area: submit-button;
-  font-size: 3.6rem;
+  font-size: 2rem;
   color: var(--primary-color);
-  background: var(--light-background);
-  border: var(--primary-color) 3px solid;
-  max-width: 400px;
-  height: 7rem;
-  width: 50%;
+  background: none;
+  /* border: var(--primary-color) 3px solid; */
+  /* max-width: 400px; */
+  height: 4rem;
+  width: auto;
   justify-self: center;
   cursor: pointer;
   transition: 400ms;
 }
 
 .submit-button:hover {
-  background: var(--primary-color);
-  color: var(--light-background);
-  border: var(--primary-color) 3px solid;
+  /* background: var(--primary-color); */
+  /* color: var(--pri-background); */
+  /* border: var(--primary-color) 3px solid; */
   transition: 400ms;
 }
 
 /* ICONS */
 
 #icons-header {
-  height: 100vh;
+  height: 100vh !important;
+  width: 100vw !important;
+  background: url(/static/IconsHeroImage_ThreeiPhones.png) center right/cover no-repeat;
+  background-size: 54%;
 }
 
 #icons-header::before {
   content: '';
-  background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover;
+  /* background: url(/static/IconsHeroImage_91kb_1191x795.jpg) center center/cover; */
   opacity: 0.85;
   position: absolute;
   top: 0;
@@ -2202,14 +2227,14 @@ nav li svg {
   z-index: -1;
 }
 
-#hero-section {
+#hero-section-icons {
   padding: 4rem;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: baseline;
   list-style: none;
-  height: 75vh;
-  background: linear-gradient(to top, rgba(2, 3, 8, 1), rgba(17, 17, 17, 0.01));
+  height: 85vh;
+  /* background: linear-gradient(to top, rgba(2, 3, 8, 1), rgba(17, 17, 17, 0.01)); */
   /* background: royalblue;
   background-image: linear-gradient(to top, rgb(253, 253, 253, 1), rgba(253, 253, 253, 0.01)); */
   width: 100%;
@@ -2217,12 +2242,21 @@ nav li svg {
 
 .hero-title {
   grid-row: 1;
+  text-transform: uppercase;
 }
 
-#hero-section ul {
+.feature {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#hero-section-icons ul {
   list-style: none;
   text-decoration: none;
-  line-height: 3;
+  line-height: 2;
+  max-width: 35%;
 }
 
 .hero-button-wrap {
@@ -2376,14 +2410,6 @@ nav li svg {
 #hq-backgrounds h2 {
   margin: 1em 0;
 
-}
-
-#hq-backgrounds {
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /* UNLIMITED Customisation */
