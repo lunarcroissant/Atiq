@@ -2250,7 +2250,8 @@ nav li svg {
 #hero-section-icons img {
   /* width: auto; */
   animation: slideDown 800ms ease-in forwards;
-  min-width: 300px;
+  /* min-width: 300px; */
+  width: 100%;
   max-width: 1000px;
   height: auto;
   object-fit: cover;
