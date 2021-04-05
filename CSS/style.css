@@ -2253,7 +2253,7 @@ nav li svg {
   min-width: 300px;
   max-width: 1000px;
   height: auto;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .icons-hero-middle-section {
