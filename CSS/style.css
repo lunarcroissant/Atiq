@@ -2536,6 +2536,7 @@ nav li svg {
   color: var(--light-background);
   background: var(--primary-color);
   border: var(--light-background) solid 4px;
+  transition: all 200ms ease-in-out;
 }
 
 .icon-purchase-button-dark a {
@@ -2566,6 +2567,7 @@ nav li svg {
   height: 300px;
   color: var(--primary-color);
   background: var(--light-background);
+  transition: all 200ms ease-in-out;
 }
 
 .purchase-options-disclaimer{
