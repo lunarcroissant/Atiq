@@ -803,22 +803,7 @@
     padding: 4rem;
     margin-top: 6rem;
     text-align: center;
-    justify-content: center;
-  }
-
-  #footer p {
-    grid-area: copyright;
-    align-items: center;
-    text-align: center;
-  }
-
-  .socials {
-    grid-area: socials;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    justify-content: space-around;
   }
 
 }
@@ -1352,9 +1337,9 @@
 
   /* ABOUT */
 
-  #footer {
+  /* #footer {
     margin-top: 0;
-  }
+  } */
 
   /* HAMBURGER MENU */
 

@@ -28,7 +28,7 @@
 
 <body>
 
-  <div id="loadingScreen">
+  <div id="loadingScreen" class="loading-screen">
     <svg id="loadLogo" width="calc(25px + 5vw)" height="calc(25px + 5vw)" viewBox="0 0 50 50" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0)">
@@ -178,7 +178,7 @@
       <div class="actions">
         <a class="cta-btn" href="shop.html">Explore & Shop</a>
         <div class="view-more-option">
-          <a href="#project-areas-overview" class="small-link view-more">SCROLL DOWN FOR MORE</a>
+          <a href="#crocofish-tee" class="small-link view-more">SCROLL DOWN FOR MORE</a>
           <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.07031 0L8.07031 16.5L6.07031 16.5L6.07032 -8.74262e-08L8.07031 0Z"
               fill="var(--primary-color)" />
@@ -194,23 +194,19 @@
 
   <!-- SECOND PROMO -->
 
-  <section class="two-col-promo">
-    <div class="two-col-promo-images">
-      <div class="two-col-promo-image-container">
-        <div class="image-selector-left-image">
-          <div class="left-arrow"></div>
-          <div class="right-arrow"></div>
-        </div>
-        <img src="/static/Will_Crocofish_WalkingAway.jpg" alt="">
+  <section class="two-col-promo margin-top-15vh" id="crocofish-tee">
+    <div class="two-col-promo__imagery">
+      <div class="two-col-promo__image-toggle_left">
+        <div class="two-col-promo__left-arrow_dark"></div>
+        <div class="two-col-promo__right-arrow_dark"></div>
       </div>
-      <!-- <div class="promo-image-container-2">
-        <img src="/static/CrocoFish_InPark.jpg" alt="">
-      </div> -->
+      <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
+        alt="Image of max wearing T-shirt with an animal design.">
     </div>
-    <div class="two-col-promo-content">
+    <div class="two-col-promo__copy margin-all-5vw">
       <h2>Our new Crocofish Tee</h2>
-      <div class="about-promo-section">
-        <div class="about-badge">Overview</div>
+      <div class="two-col-promo__copy-paragraph">
+        <div class="two-col-promo__about-badge margin-vertical-2em">Overview</div>
         <p>Limited to 50, 100% plastic free and locally screen printed. To make sure they last, each T-Shirt is
           made of premium cotton and screen printed by our trusted local experts. Plus, all T-Shirts are produced using
           100% renewable (wind & solar) energy and environmentally friendly inks.</p>
@@ -223,20 +219,19 @@
 
   <!-- SECOND PROMO -->
 
-  <section class="two-col-promo-image-right">
-    <div class="two-col-promo-images">
-      <div class="two-col-promo-image-container">
-        <div class="image-selector-right-image">
-          <div class="left-arrow-light"></div>
-          <div class="right-arrow-light"></div>
-        </div>
-        <img src="/static/IMG_0083.jpg" alt="Image of phone displaying custom dark mode icons.">
+  <section class="two-col-promo two-col-promo_image_right margin-top-15vh">
+    <div class="two-col-promo__imagery">
+      <div class="two-col-promo__image-toggle_right">
+        <div class="two-col-promo__left-arrow_light"></div>
+        <div class="two-col-promo__right-arrow_light"></div>
       </div>
+      <img class="two-col-promo__image two-col-promo__image_centred" src="/static/IMG_0083.jpg"
+        alt="Image of phone displaying custom dark mode icons.">
     </div>
-    <div class="two-col-promo-content">
+    <div class="two-col-promo__copy margin-all-5vw">
       <h2>New Icons have arrived</h2>
-      <div class="about-promo-section">
-        <div class="about-badge">Overview</div>
+      <div class="two-col-promo__copy-paragraph">
+        <div class="two-col-promo__about-badge margin-vertical-2em">Overview</div>
         <p>Give your phone a clean and minimalistic look with over 150 custom-designed icons. Available in dark, light
           and multi-colour themes, each pack lets you customise the most popular apps across iOS and Android. Purchasing
           a pack gives you lifetime access to all updates and new icons. </p>
@@ -248,7 +243,7 @@
     </div>
   </section>
 
-  <div class="thin-divider-container">
+  <div class="full-width-container margin-top-15vh">
     <div class="thin-divider"></div>
   </div>
 
@@ -305,15 +300,14 @@
   <!-- FOOTER -->
 
   <footer id="footer" class="footer">
-    <p>&copy; <span class="bold-p">Atiq</span> 2021</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/atiq.studios/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/atiq.studios" target="_blank">Facebook</a>
+    <p class="footer__link">&copy; <span class="bold-p">Atiq</span> 2021</p>
+    <div class="footer__socials">
+      <a class="footer__link" href="https://www.instagram.com/atiq.studios/" target="_blank">Instagram</a>
+      <a class="footer__link" href="https://www.facebook.com/atiq.studios" target="_blank">Facebook</a>
     </div>
-    <div id="privacy-policy">
-      <a href="">Privacy Policy</a>
+    <div id="privacy-policy" class="footer__privacy-policy">
+      <a class="footer__link" href="">Privacy Policy</a>
     </div>
-
   </footer>
 
 </body>
