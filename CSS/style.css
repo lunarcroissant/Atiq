@@ -1159,8 +1159,27 @@ nav li svg {
   min-width: 350px;
   flex: 1;
   overflow: hidden;
-  
   position: relative;
+}
+
+.two-col-promo__image-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* position: relative; */
+  transition: transform 300ms ease-in;
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+.two-col-promo__image-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 /* .two-col-promo-image-container {
@@ -1172,12 +1191,14 @@ nav li svg {
   position: relative;
 } */
 
+
+
 .two-col-promo__image {
   width: 100%;
-  height: inherit;
+  height: 100vh;
   object-fit: cover;
   object-position: bottom;
-  position: relative;
+  /* position: relative; */
 }
 
 .two-col-promo__image_centred {
@@ -1217,9 +1238,12 @@ nav li svg {
   bottom: 3em;
   left: 3em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 2;
+  background: rgba(247, 247, 247, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 .two-col-promo__image-toggle_right {
@@ -1230,9 +1254,14 @@ nav li svg {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  background: rgba(247, 247, 247, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 .two-col-promo__left-arrow_light, .two-col-promo__right-arrow_light {
+  all: unset;
+  cursor: pointer;
   height: 0;
   width: 0;
   border-top: 10px solid transparent;
@@ -1252,6 +1281,8 @@ nav li svg {
 
 
 .two-col-promo__left-arrow_dark, .two-col-promo__right-arrow_dark {
+  all: unset;
+  cursor: pointer;
   height: 0;
   width: 0;
   border-top: 10px solid transparent;

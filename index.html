@@ -197,12 +197,28 @@
   <section class="two-col-promo margin-top-15vh" id="crocofish-tee">
     <div class="two-col-promo__imagery">
       <div class="two-col-promo__image-toggle_left">
-        <div class="two-col-promo__left-arrow_dark"></div>
-        <div class="two-col-promo__right-arrow_dark"></div>
+        <button class="two-col-promo__left-arrow_dark"></button>
+        <button class="two-col-promo__right-arrow_dark"></button>
       </div>
-      <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
-        alt="Image of max wearing T-shirt with an animal design.">
+
+      <ul class="two-col-promo__image-carousel-track">
+        <li class="two-col-promo__image-slide current-slide">
+          <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+        <li class="two-col-promo__image-slide">
+          <img class="two-col-promo__image" src="/static/CrocoFish_InPark.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+        <li class="two-col-promo__image-slide">
+          <img class="two-col-promo__image" src="/static/CrocoFish_SatInTree_657x985_91kb.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+      </ul>
+      <!-- <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
+        alt="Image of max wearing T-shirt with an animal design."> -->
     </div>
+
     <div class="two-col-promo__copy margin-all-5vw">
       <h2>Our new Crocofish Tee</h2>
       <div class="two-col-promo__copy-paragraph">
@@ -309,6 +325,8 @@
       <a class="footer__link" href="">Privacy Policy</a>
     </div>
   </footer>
+
+  <script src="js/carousel.js"></script>
 
 </body>
 
