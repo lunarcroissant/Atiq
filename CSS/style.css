@@ -1131,7 +1131,7 @@ nav li svg {
 }
 
 
-.two-col-promo_image_right {
+.two-col-promo_image--right {
   flex-direction: row-reverse;
 }
 
@@ -1233,7 +1233,7 @@ nav li svg {
   flex-wrap: wrap;
 } */
 
-.two-col-promo__image-toggle_left {
+.two-col-promo__image-toggle--left {
   position: absolute;
   bottom: 3em;
   left: 3em;
@@ -1246,7 +1246,7 @@ nav li svg {
   border-radius: 1em;
 }
 
-.two-col-promo__image-toggle_right {
+.two-col-promo__image-toggle--right {
   position: absolute;
   bottom: 3em;
   right: 3em;
@@ -1259,7 +1259,7 @@ nav li svg {
   border-radius: 1em;
 }
 
-.two-col-promo__left-arrow_light, .two-col-promo__right-arrow_light {
+.two-col-promo__left-arrow--light, .two-col-promo__right-arrow--light {
   all: unset;
   cursor: pointer;
   height: 0;
@@ -1269,18 +1269,18 @@ nav li svg {
   opacity: 0.5;
 }
 
-.two-col-promo__left-arrow_light {
+.two-col-promo__left-arrow--light {
   border-right: 10px solid #F7F7F7;
   margin-right: 2em;
 }
 
-.two-col-promo__right-arrow_light {
+.two-col-promo__right-arrow--light {
   border-left: 10px solid #F7F7F7;
 }
 
 
 
-.two-col-promo__left-arrow_dark, .two-col-promo__right-arrow_dark {
+.two-col-promo__left-arrow--dark, .two-col-promo__right-arrow--dark {
   all: unset;
   cursor: pointer;
   height: 0;
@@ -1290,12 +1290,12 @@ nav li svg {
   opacity: 0.5;
 }
 
-.two-col-promo__left-arrow_dark {
+.two-col-promo__left-arrow--dark {
   border-right: 10px solid var(--primary-color);
   margin-right: 2em;
 }
 
-.two-col-promo__right-arrow_dark {
+.two-col-promo__right-arrow--dark {
   border-left: 10px solid var(--primary-color);
 }
 

@@ -1,7 +1,7 @@
 const track = document.querySelector('.two-col-promo__image-carousel-track');
 const slides = Array.from(track.children);
-const nextButton = document.querySelector('.two-col-promo__right-arrow_dark');
-const prevButton = document.querySelector('.two-col-promo__left-arrow_dark');
+const nextButton = document.querySelector('.two-col-promo__right-arrow--dark');
+const prevButton = document.querySelector('.two-col-promo__left-arrow--dark');
 
 // console.log(slides);
 
