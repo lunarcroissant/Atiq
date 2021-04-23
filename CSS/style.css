@@ -75,12 +75,12 @@ body {
   font-family: 'Roboto', serif;
 }
 
-@media screen and (prefers-color-scheme: light) {
+/* @media screen and (prefers-color-scheme: light) {
   body {
     background: var(--primary-color);
     color: var(--light-background);
   }
-}
+} */
 
 #logo {
   display: grid;
@@ -124,14 +124,12 @@ h5 {
 }
 
 h6 {
-  /* font-size: 2rem; */
   font-size: calc(.5vw + 1.6rem);
   font-weight: 600;
 }
 
 p {
   font-weight: 200;
-  /* font-size: 1.6rem; */
   font-size: calc(.15vw + 1.6rem);
   line-height: 2.5em;
 }
@@ -255,6 +253,7 @@ p {
 .nav-btn-icon:hover {
   opacity: 0.8;
 }
+
 .nav-btn {
   text-decoration: none;
   position: relative;
@@ -279,6 +278,7 @@ p {
   transform: scaleX(0);
   transition: transform 400ms ease-in;
 }
+
 .nav-btn:hover::after {
   transform-origin: left;
   transform: scaleX(1);
