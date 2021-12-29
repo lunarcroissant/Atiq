@@ -5,7 +5,7 @@ const prevButton = document.querySelector('.two-col-promo__left-arrow--dark');
 
 // console.log(slides);
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+
 // const slideWidth = slideSize.width;
 
 // console.log(slideWidth);

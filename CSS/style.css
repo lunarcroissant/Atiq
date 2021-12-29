@@ -1730,6 +1730,13 @@ nav li svg {
   /* width: 100vw; */
 }
 
+/* .three-column-tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+} */
+
 #second-shop-section {
   display: flex;
   flex-direction: row;

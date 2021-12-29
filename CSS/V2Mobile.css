@@ -1,0 +1,220 @@
+/* Tablet 1023px */
+
+@media screen and (max-width: 1023px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  nav {
+    height: 75px;
+    max-height: 75px;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .nav__pageLink {
+    /* display: none; */
+    /* margin-top: 2rem; */
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    opacity: 1;
+    font-size: 2rem;
+    animation: slideIn 600ms forwards ease-in-out;
+  }
+
+  .nav__returnButton {
+    margin-top: 20vh;
+    display: flex;
+  }
+
+  /* .nav__pageLink:first-of-type {
+    margin-top: 0;
+  } */
+
+  .nav__pages {
+    position: fixed;
+    background: rgba(254, 254, 254, 0.8);
+    backdrop-filter: blur(0.25rem);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    animation: menuOpen 200ms forwards ease-in-out;
+  }
+
+  .nav__mobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1rem;
+  }
+
+  .nav__mobileMenuIconTop,
+  .nav__mobileMenuIconBottom {
+    width: 35px;
+    height: 3px;
+    border-radius: 1px;
+    background: var(--black);
+  }
+
+  .nav__mobileMenu--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+  }
+
+  .nav__mobileMenuIconTop--active {
+    transform: rotate(45deg);
+  }
+
+  .nav__mobileMenuIconBottom--active {
+    transform: rotate(-45deg);
+  }
+
+  @keyframes menuOpen {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    10% {
+      display: flex;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+
+  .fullViewPortSection,
+  .horizontalScroll__track {
+    padding: 20px;
+    height: auto;
+  }
+
+  .horizontalScroll__card {
+    height: auto;
+  }
+
+  .horizontalScroll__track {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .horizontalScroll__infoCard {
+    min-width: 350px;
+    height: 100%;
+  }
+
+  .fullWidthCard {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card,
+  .utilityTile,
+  .horizontalScroll__infoCard {
+    height: 550px;
+    max-height: 80vh;
+  }
+
+  .utilityTile {
+    margin: 0 var(--standard-margin) 0 0;
+    padding: 0 var(--standard-margin) 0 0;
+    min-width: 200px;
+  }
+
+  .card__mobileDescription {
+    display: flex;
+  }
+
+  footer {
+    padding: var(--standard-margin);
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer__link {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .footer__text {
+    white-space: nowrap;
+    margin-left: 0;
+  }
+}
+
+/* Mobile 450px */
+
+@media screen and (max-width: 450px) {
+  .horizontalScroll__infoCard {
+    min-width: 300px;
+    height: 100%;
+  }
+
+  .fullWidthCard {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card,
+  .utilityTile,
+  .horizontalScroll__infoCard {
+    /* height: auto; */
+    height: 550px;
+    max-height: 80vh;
+    /* max-width: calc(100vw - 40px); */
+    max-width: 300px;
+  }
+
+  .horizontalScroll__infoCard {
+    max-width: 300px;
+    margin-right: 1rem;
+  }
+
+  .horizontalScroll__card {
+    margin-right: 1rem;
+  }
+
+  .utilityTile {
+    margin: 0 var(--standard-margin) 0 0;
+    padding: 0 var(--standard-margin) 0 0;
+    min-width: 200px;
+  }
+
+  .card__mobileDescription {
+    display: flex;
+  }
+}

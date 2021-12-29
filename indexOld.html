@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atiq | Creative Projects</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/mobile.css">
+  <script src="main.js" defer></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- <link rel="icon" href="/static/Atiq Logo 32px.png" type="imagepng"/> -->
+  <!-- <link rel="icon" type="image/png" href="/static/Atiq Logo 32px.png"/> -->
+  <link rel='shortcut icon' type='image/x-icon' href='/static/AtiqLogoGrey 32px.png' />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap"
+    rel="stylesheet">
+
+  <meta name="description" content="Discover unique designs and custom art.">
+  <meta name="keywords" content="t-shirts,tees,photography,prints,buy pictures,wallpapers,icons,design">
+
+</head>
+
+<body>
+
+  <div id="loadingScreen" class="loading-screen">
+    <svg id="loadLogo" width="calc(25px + 5vw)" height="calc(25px + 5vw)" viewBox="0 0 50 50" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+        <path id="clipLoadedRect" fill-rule="evenodd" clip-rule="evenodd"
+          d="M41.1581 16.7232L25.0641 26.0225V46.272L37.9407 38.8318L37.9271 18.5902L41.1581 16.7232V36.9772L44.3827 38.8375L25.0637 50L21.8371 48.1385L21.8326 24.1555L37.9242 14.8577L41.1581 16.7232V16.7232ZM15.4049 20.4473V44.4315L18.6151 46.2833V22.2993L15.4049 20.4473ZM15.1197 9.45283L5.7454 14.8692V38.8588L2.53906 37.0092V13.0195L25.0719 0L47.6044 12.999L47.6016 36.9815L44.5324 35.2102L44.3756 14.8645L44.3747 14.865L37.9206 11.1417L25.0577 18.5738L21.8502 16.7233L34.7537 9.2675L31.5239 7.40433L12.1774 18.5827V42.5695L8.98223 40.7262L8.9659 16.73L18.3426 11.312L15.1197 9.45283V9.45283ZM17.0991 19.4685L20.3104 17.613L23.5166 19.4627L20.3052 21.3182L17.0991 19.4685V19.4685ZM18.3192 7.60417L21.5421 9.46333L28.2716 5.57517L25.0486 3.71583L18.3192 7.60417V7.60417Z"
+          fill="#f3f3f3" />
+      </g>
+      <defs>
+        <clipPath id="clipLoaded">
+          <rect width="50" height="50" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    <div id="loadProgress"></div>
+  </div>
+
+  <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+
+  <script>
+    let loadProgress = document.getElementById('loadProgress');
+    let logo = document.getElementById('loadLogo');
+    let heroLoaded = document.getElementsByClassName('hero-content');
+
+    var queue = new createjs.LoadQueue(false);
+
+    queue.on("progress", event => {
+      console.log(event);
+      let progress = Math.floor(event.progress * 100);
+      this.loadProgress.style.width = progress - 30 + '%';
+      if (progress == 100) {
+        // alert('All done');
+        document.getElementById('loadingScreen').style.display = 'none';
+        // document.getElementById('loadingScreen').style.background = 'none';
+        document.getElementById('clipLoadedRect').style.fill = '#252525';
+        document.getElementById('clipLoadedRect').style.opacity = '0';
+        document.getElementById('loadProgress').style.opacity = '0';
+      }
+    });
+
+    queue.on("complete", event => {
+      // heroLoaded.classList.add('slideUp');
+
+      loadProgress.classList.add('fadeOut');
+    });
+
+    queue.on("fileload", handleFileComplete);
+    queue.loadFile('/static/KOLOROK\ HERO\ IMAGE\ 1600px-min.jpg');
+    // queue.loadFile('/stat');
+
+    function handleFileComplete(event) {
+
+    }
+
+
+  </script>
+
+  <header>
+    <div id="heroBackground" class="hero-background">
+      <div class="redcircle"></div>
+      <div class="dark-mode-background"></div>
+    </div>
+    <div class="showcase-container">
+      <nav class="hero-nav">
+        <ul class="flex-row">
+          <li><a class="nav-btn-icon" href="index.html"><svg width="100" height="100" viewBox="0 0 150 150" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M121.016 51.3913L75.2234 77.8505V135.467L111.862 114.297L111.823 56.7034L121.016 51.3913V109.02L130.191 114.313L75.2224 146.074L66.0418 140.778L66.029 72.5385L111.815 46.0833L121.016 51.3913ZM47.7402 61.9877V130.23L56.8742 135.5V67.2573L47.7402 61.9877ZM46.9286 30.7047L20.2558 46.1162V114.374L11.1328 109.111V40.8533L75.246 3.80859L139.358 40.7946L139.35 109.033L130.617 103.992L130.171 46.1029L130.169 46.1042L111.805 35.51L75.2058 56.6567L66.0791 51.3915L102.794 30.1778L93.6037 24.876L38.5571 56.6821V124.932L29.4656 119.687L29.4193 51.4106L56.0989 35.995L46.9286 30.7047ZM52.5606 59.2026L61.6977 53.9231L70.8203 59.186L61.6832 64.4653L52.5606 59.2026ZM56.0321 25.4446L65.2025 30.7349L84.3499 19.6715L75.1796 14.3811L56.0321 25.4446Z"
+                  fill="var(--primary-color)" />
+              </svg>
+            </a>
+          </li>
+          <li><a class="nav-btn mobile-off" href="about.html">ABOUT</a></li>
+          <li><a class="nav-btn mobile-off" href="upcoming-projects.html">UPCOMING</a></li>
+          <li><a class="nav-btn mobile-off" href="prints.html">GALLERY</a></li>
+          <li><a class="nav-btn mobile-off" href="shop.html">SHOP</a></li>
+          <li class="mobile-off">
+            <div class="toggle-container mobile-off">
+              <input type="checkbox" id="dark-mode-switch" name="theme">
+              <label id="dark-mode-label-switch" for="dark-mode-switch">DARK MODE</label>
+            </div>
+          </li>
+          <script>
+
+            var checkbox = document.querySelector('input[name=theme]');
+            var doltheme = window.localStorage.getItem('theme');
+
+            checkbox.addEventListener('change', function () {
+              if (this.checked) {
+
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+                window.localStorage.setItem('theme', 'dark');
+                document.getElementById('dark-mode-label-switch').innerHTML = "LIGHT MODE";
+
+              } else {
+
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+                window.localStorage.setItem('theme', 'light');
+                document.getElementById('dark-mode-label-switch').innerHTML = "DARK MODE";
+
+              }
+            })
+
+            let trans = () => {
+              document.documentElement.classList.add('transition');
+              window.setTimeout(() => {
+                document.documentElement.classList.remove('transition');
+              }, 1000)
+            }
+
+            function checksettheme() {
+              if (doltheme == "dark") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                $('input[type="checkbox"]').attr("checked", "checked");
+              } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+              }
+            }
+
+
+          </script>
+          <div class="mobile-menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+              <div></div>
+            </div>
+            <div class="mobile-menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="upcoming-projects.html">UPCOMING PROJECTS</a></li>
+                    <li><a href="prints.html">GALLERY</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
+      <section class="hero-content">
+        <h1>CREATIVE<br>PROJECTS<br>DESIGNED<br>TO BE SEEN<br>AND USED</h1>
+      </section>
+      <div class="actions">
+        <a class="cta-btn" href="shop.html">Explore & Shop</a>
+        <div class="view-more-option">
+          <a href="#crocofish-tee" class="small-link view-more">SCROLL DOWN FOR MORE</a>
+          <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.07031 0L8.07031 16.5L6.07031 16.5L6.07032 -8.74262e-08L8.07031 0Z"
+              fill="var(--primary-color)" />
+            <rect x="1.41406" y="10.0859" width="10" height="2" transform="rotate(45 1.41406 10.0859)"
+              fill="var(--primary-color)" />
+            <rect x="14.1406" y="11.5" width="10" height="2" transform="rotate(135 14.1406 11.5)"
+              fill="var(--primary-color)" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECOND PROMO -->
+
+  <section class="two-col-promo margin-top-15vh" id="crocofish-tee">
+    <div class="two-col-promo__imagery">
+      <div class="two-col-promo__image-toggle--left">
+        <button class="two-col-promo__left-arrow--dark"></button>
+        <button class="two-col-promo__right-arrow--dark"></button>
+      </div>
+
+      <ul class="two-col-promo__image-carousel-track">
+        <li class="two-col-promo__image-slide current-slide">
+          <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+        <li class="two-col-promo__image-slide">
+          <img class="two-col-promo__image" src="/static/CrocoFish_InPark.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+        <li class="two-col-promo__image-slide">
+          <img class="two-col-promo__image" src="/static/CrocoFish_SatInTree_657x985_91kb.jpg"
+            alt="Image of max wearing T-shirt with an animal design.">
+        </li>
+      </ul>
+      <!-- <img class="two-col-promo__image" src="/static/Will_Crocofish_WalkingAway.jpg"
+        alt="Image of max wearing T-shirt with an animal design."> -->
+    </div>
+
+    <div class="two-col-promo__copy margin-all-5vw">
+      <h2>Our new Crocofish Tee</h2>
+      <div class="two-col-promo__copy-paragraph">
+        <div class="two-col-promo__about-badge margin-vertical-2em">Overview</div>
+        <p>Limited to 50, 100% plastic free and locally screen printed. To make sure they last, each T-Shirt is
+          made of premium cotton and screen printed by our trusted local experts. Plus, all T-Shirts are produced using
+          100% renewable (wind & solar) energy and environmentally friendly inks.</p>
+      </div>
+      <div class="container">
+        <a href="clothing.html" class="cta-btn-underlined">Take a look</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND PROMO -->
+
+  <section class="two-col-promo two-col-promo_image--right margin-top-15vh">
+    <div class="two-col-promo__imagery">
+      <div class="two-col-promo__image-toggle--right">
+        <div class="two-col-promo__left-arrow--light"></div>
+        <div class="two-col-promo__right-arrow--light"></div>
+      </div>
+      <img class="two-col-promo__image two-col-promo__image_centred" src="/static/IMG_0083.jpg"
+        alt="Image of phone displaying custom dark mode icons.">
+    </div>
+    <div class="two-col-promo__copy margin-all-5vw">
+      <h2>New Icons have arrived</h2>
+      <div class="two-col-promo__copy-paragraph">
+        <div class="two-col-promo__about-badge margin-vertical-2em">Overview</div>
+        <p>Give your phone a clean and minimalistic look with over 150 custom-designed icons. Available in dark, light
+          and multi-colour themes, each pack lets you customise the most popular apps across iOS and Android. Purchasing
+          a pack gives you lifetime access to all updates and new icons. </p>
+      </div>
+      <div class="container">
+        <a href="icons.html" class="cta-btn-underlined">Discover & download</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="full-width-container margin-top-15vh">
+    <div class="thin-divider"></div>
+  </div>
+
+  <!-- PRINTS PROMO -->
+
+  <section id="prints-promo">
+    <h2>Latest prints</h2>
+    <a href="prints.html" class="cta-btn-underlined">View the gallery</a>
+    <div class="marquee">
+      <ul class="marquee-content">
+        <!-- SLIDE 1 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 2 -->
+        <li class="landscape"></li>
+
+        <!-- SLIDE 3 -->
+        <li class="landscape"></li>
+
+        <!-- SLIDE 4 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 5 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 6 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 7 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 8 -->
+        <li class="landscape"></li>
+
+        <!-- SLIDE 9 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 10 -->
+        <li class="portrait"></li>
+
+        <!-- SLIDE 11 -->
+        <li class="landscape"></li>
+
+        <!-- SLIDE 12 -->
+        <li class="landscape"></li>
+      </ul>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer id="footer" class="footer">
+    <p class="footer__link">&copy; <span class="bold-p">Atiq</span> 2021</p>
+    <div class="footer__socials">
+      <a class="footer__link" href="https://www.instagram.com/atiq.studios/" target="_blank">Instagram</a>
+      <a class="footer__link" href="https://www.facebook.com/atiq.studios" target="_blank">Facebook</a>
+    </div>
+    <div id="privacy-policy" class="footer__privacy-policy">
+      <a class="footer__link" href="">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script src="js/carousel.js"></script>
+
+</body>
+
+</html>
