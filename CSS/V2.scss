@@ -513,12 +513,30 @@ footer {
   justify-content: center;
 }
 
+@media screen and (max-width: 1023px) {
+  .justify-center-md {
+    justify-content: center;
+  }
+}
+
 .justify-start {
   justify-content: flex-start;
 }
 
+@media screen and (min-width: 1023px) {
+  .justify-start-lg {
+    justify-content: flex-start;
+  }
+}
+
 .justify-end {
   justify-content: flex-end;
+}
+
+@media screen and (min-width: 1023px) {
+  .justify-end-lg {
+    justify-content: flex-end;
+  }
 }
 
 .justify-between {
@@ -533,10 +551,6 @@ footer {
   .mobile-off {
     display: none;
   }
-}
-
-.mobile-off {
-  display: none;
 }
 
 // Text alignment
@@ -612,6 +626,14 @@ footer {
 
   &-8 {
     padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .padding-top-md {
+    &-4 {
+      padding-top: 1rem;
+    }
   }
 }
 
