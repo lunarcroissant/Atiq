@@ -154,7 +154,8 @@
     min-width: 200px;
   }
 
-  .card__mobileDescription {
+  .card__mobileDescription,
+  .card__mobileGroupDescription {
     display: flex;
   }
 
