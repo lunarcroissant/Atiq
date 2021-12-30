@@ -154,7 +154,10 @@ footer {
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
-  // padding-left: 200px;
+
+  & section:first-child {
+    margin-top: 75px;
+  }
 }
 
 .fullViewPortSection {
