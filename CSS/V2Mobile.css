@@ -116,6 +116,10 @@
     }
   }
 
+  .pagetrain section:first-child {
+    margin-top: 75px;
+  }
+
   .fullViewPortSection,
   .horizontalScroll__track {
     padding: 20px;

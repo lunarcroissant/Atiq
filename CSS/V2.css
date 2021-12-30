@@ -135,9 +135,6 @@ footer {
   overflow-x: hidden;
   height: 100vh;
 }
-.pagetrain section:first-child {
-  margin-top: 75px;
-}
 
 .fullViewPortSection {
   display: flex;
