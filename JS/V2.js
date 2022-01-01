@@ -13,3 +13,9 @@ closeMobileMenuButton.addEventListener('click', () => {
   mobileMenu.classList.remove('reveal-flex');
   closeMobileMenuButton.classList.remove('reveal-flex');
 })
+
+const desktopMenu = document.getElementsByTagName('nav')[0];
+
+desktopMenu.style.height = `${document.getElementsByTagName('main')[0].getBoundingClientRect().height}px`;
+
+console.log(document.getElementsByTagName('main')[0].getBoundingClientRect().height);
