@@ -288,4 +288,8 @@
   .footer__linkText {
     font-size: 0.85rem;
   }
+
+  footer {
+    flex-direction: column;
+  }
 }
