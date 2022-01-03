@@ -65,6 +65,12 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .justify-evenly-sm {
+    justify-content: space-evenly;
+  }
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -166,6 +172,16 @@
     &-4 {
       padding-top: 1rem;
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .justify-evenly-sm {
+    justify-content: space-evenly;
+  }
+
+  .padding-top-sm-4 {
+    padding-top: 1rem;
   }
 }
 
