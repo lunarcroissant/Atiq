@@ -297,6 +297,13 @@ main {
   height: 100vh;
   padding: var(--standard-margin) 0;
   padding-left: 150px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
 }
 
 .fullWidthCard {

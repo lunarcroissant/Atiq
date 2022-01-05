@@ -243,6 +243,12 @@ main {
   height: 100vh;
   padding: var(--standard-margin) 0;
   padding-left: 150px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
+.fullViewPortSection::-webkit-scrollbar {
+  display: none;
 }
 
 .fullWidthCard {
