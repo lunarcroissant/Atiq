@@ -140,11 +140,13 @@
 
   .btn-purchase {
     max-width: 100%;
+    width: 100%;
     margin-top: 1.5rem;
   }
 
   .btn-purchase-secondary {
     max-width: 100%;
+    width: 100%;
     margin-top: 1rem;
   }
 
@@ -215,7 +217,11 @@
   }
 
   .category__detailsGrid {
-    padding: 0 1rem;
+    padding: 0 20px;
+  }
+
+  .category__detailsGrid--no-padding {
+    padding: 0 20px 0 0;
   }
 
   .horizontal__divider {

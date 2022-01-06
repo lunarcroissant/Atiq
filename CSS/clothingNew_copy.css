@@ -401,10 +401,16 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
   grid-template-rows: repeat(1, 1fr);
 }
+.category__detailsGrid--no-padding {
+  padding: 0 0 20px 0;
+}
 
 .detail {
   display: flex;
   padding: 0 1rem 1rem 0;
+}
+.detail--no-indent {
+  padding: 0 1rem 0 0;
 }
 .detail__image {
   height: 32px;
