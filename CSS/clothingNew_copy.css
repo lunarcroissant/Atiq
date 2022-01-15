@@ -13,6 +13,7 @@
   --dark-blue: #105267;
   --off-white: #f7f7f7;
   --light-grey: #eceff1;
+  --warning-red: #ca3737;
   --standard-margin: 2rem;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -228,6 +229,20 @@ main {
   left: 0;
   right: 0;
   overflow: hidden;
+}
+
+.notificationMessage {
+  width: 100%;
+  border-radius: 4rem 0 0 4rem;
+  background: var(--warning-red);
+  margin-left: 150px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .horizontalScroll__track {

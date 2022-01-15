@@ -150,6 +150,10 @@
     margin-top: 1rem;
   }
 
+  .notificationMessage {
+    margin-left: 20px;
+  }
+
   .fullViewPortSection,
   .horizontalScroll__track {
     padding: 20px;
